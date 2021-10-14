@@ -1,0 +1,12 @@
+lib_LTLIBRARIES += bfshell_plugin_clish.la
+
+bfshell_plugin_clish_la_LDFLAGS = -avoid-version -module
+
+bfshell_plugin_clish_la_SOURCES = \
+	plugins/clish/builtin_init.c \
+	plugins/clish/hook_access.c \
+	plugins/clish/hook_config.c \
+	plugins/clish/hook_log.c \
+	plugins/clish/sym_misc.c \
+	plugins/clish/sym_script.c \
+	plugins/clish/private.h

@@ -1,0 +1,13 @@
+[submodule "third-party/cpython"]
+	path = third-party/cpython
+	url = https://github.com/python/cpython.git
+	shallow = true
+[submodule "third-party/cJSON"]
+	path = third-party/cJSON
+	url = https://github.com/DaveGamble/cJSON.git
+[submodule "third-party/tommyds"]
+	path = third-party/tommyds
+	url = https://github.com/amadvance/tommyds.git
+[submodule "third-party/xxHash"]
+	path = third-party/xxHash
+	url = https://github.com/Cyan4973/xxHash.git

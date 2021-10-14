@@ -1,0 +1,21 @@
+## Process this file with automake to generate Makefile.in
+noinst_LTLIBRARIES += libkonf.la
+libkonf_la_SOURCES =
+libkonf_la_DEPENDENCIES = liblub.la
+
+nobase_include_HEADERS += \
+	bfutils/konf/tree.h \
+	bfutils/konf/query.h \
+	bfutils/konf/buf.h \
+	bfutils/konf/net.h
+
+EXTRA_DIST += \
+	konf/tree/module.am \
+	konf/query/module.am \
+	konf/buf/module.am \
+	konf/net/module.am
+
+include $(top_srcdir)/konf/tree/module.am
+include $(top_srcdir)/konf/query/module.am
+include $(top_srcdir)/konf/buf/module.am
+include $(top_srcdir)/konf/net/module.am
