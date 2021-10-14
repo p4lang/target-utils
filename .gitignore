@@ -8,6 +8,7 @@ cscope.files
 Makefile.in
 aclocal.m4
 autom4te.cache/
+build/
 configure
 include/Makefile.in
 m4/
@@ -17,6 +18,7 @@ config.guess
 config.h.in
 config.sub
 depcomp
+install
 install-sh
 ltmain.sh
 missing
