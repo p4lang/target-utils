@@ -1,0 +1,2 @@
+liblub_la_SOURCES += lub/ctype/ctype.c
+
