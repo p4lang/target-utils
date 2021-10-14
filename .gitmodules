@@ -5,6 +5,9 @@
 [submodule "third-party/cJSON"]
 	path = third-party/cJSON
 	url = https://github.com/DaveGamble/cJSON.git
+[submodule "third-party/target-syslibs"]
+	path = third-party/target-syslibs
+	url = https://github.com/p4lang/target-syslibs.git
 [submodule "third-party/tommyds"]
 	path = third-party/tommyds
 	url = https://github.com/amadvance/tommyds.git
