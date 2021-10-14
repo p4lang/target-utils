@@ -19,6 +19,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - name: dependecies install
+      - name: libedit
+        run: sudo apt-get install -y libedit-dev
+      - name: expat
+        run: sudo apt-get install -y expat
     - name: Checking out repo and submodules
       uses: actions/checkout@v2
       with:
