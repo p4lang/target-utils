@@ -5,8 +5,8 @@
 #include <string.h>
 #include <assert.h>
 
-#include "target_utils/lub/string.h"
-#include "target_utils/lub/system.h"
+#include "target-utils/lub/string.h"
+#include "target-utils/lub/system.h"
 #include "private.h"
 
 /*----------------------------------------------------------- */

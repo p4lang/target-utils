@@ -17,8 +17,8 @@
  *
  ***************************************************************/
 
-#include <target_utils/uCli/ucli_config.h>
-#include <target_utils/uCli/ucli.h>
+#include <target-utils/uCli/ucli_config.h>
+#include <target-utils/uCli/ucli.h>
 #include "ucli_int.h"
 #include <stdlib.h>
 #include <string.h>

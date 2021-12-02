@@ -23,13 +23,13 @@
  *
  ***********************************************************/
 
-#include <target_utils/ELS/els_config.h>
+#include <target-utils/ELS/els_config.h>
 
 #if ELS_CONFIG_INCLUDE_UCLI == 1
 
-#include <target_utils/uCli/ucli.h>
-#include <target_utils/uCli/ucli_argparse.h>
-#include <target_utils/uCli/ucli_handler_macros.h>
+#include <target-utils/uCli/ucli.h>
+#include <target-utils/uCli/ucli_argparse.h>
+#include <target-utils/uCli/ucli_handler_macros.h>
 
 static ucli_status_t
 els_ucli_ucli__config__(ucli_context_t* uc)

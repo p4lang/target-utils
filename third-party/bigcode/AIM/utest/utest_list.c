@@ -27,7 +27,7 @@
 #include <string.h>
 #include <assert.h>
 
-#include <target_utils/AIM/aim_list.h>
+#include <target-utils/AIM/aim_list.h>
 
 int utest_list(void)
 {

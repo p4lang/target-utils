@@ -3,7 +3,7 @@
  */
 #include <regex.h>
 
-#include "target_utils/clish/nspace.h"
+#include "target-utils/clish/nspace.h"
 
 /*---------------------------------------------------------
  * PRIVATE TYPES

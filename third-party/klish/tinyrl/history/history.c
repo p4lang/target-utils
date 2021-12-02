@@ -10,9 +10,9 @@
 #include <errno.h>
 
 #include "private.h"
-#include "target_utils/lub/porting.h"
-#include "target_utils/lub/string.h"
-#include "target_utils/tinyrl/history.h"
+#include "target-utils/lub/porting.h"
+#include "target-utils/lub/string.h"
+#include "target-utils/tinyrl/history.h"
 
 struct _tinyrl_history {
 	tinyrl_history_entry_t **entries;	/* pointer entries */

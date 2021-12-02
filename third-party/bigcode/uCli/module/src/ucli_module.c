@@ -19,7 +19,7 @@
 
 #include "ucli_int.h"
 
-#include <target_utils/uCli/ucli.h>
+#include <target-utils/uCli/ucli.h>
 #include "ucli_log.h"
 
 #include <stdarg.h>

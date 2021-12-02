@@ -2,8 +2,8 @@
  * plugin private.h
  */
 
-#include "target_utils/lub/list.h"
-#include "target_utils/clish/plugin.h"
+#include "target-utils/lub/list.h"
+#include "target-utils/clish/plugin.h"
 
 /*---------------------------------------------------------
  * PRIVATE TYPES

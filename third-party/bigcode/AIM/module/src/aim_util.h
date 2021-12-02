@@ -28,7 +28,7 @@
 #define __AIM_UTIL_H__
 
 
-#include <target_utils/AIM/aim_config.h>
+#include <target-utils/AIM/aim_config.h>
 
 
 /* <auto.start.util(ALL).header> */

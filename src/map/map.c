@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-#include <target_utils/map/map.h>
+#include <target-utils/map/map.h>
 #include "map_log.h"
 #include <Judy.h>
 #include <target_sys/bf_sal/bf_sys_intf.h>

@@ -4,9 +4,9 @@
  * This file provides the implementation of the "param" class
  */
 #include "private.h"
-#include "target_utils/lub/porting.h"
-#include "target_utils/lub/string.h"
-#include "target_utils/clish/types.h"
+#include "target-utils/lub/porting.h"
+#include "target-utils/lub/string.h"
+#include "target-utils/clish/types.h"
 
 #include <assert.h>
 #include <stdlib.h>

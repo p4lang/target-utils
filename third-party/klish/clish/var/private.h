@@ -1,7 +1,7 @@
 /*
  * var/private.h
  */
-#include "target_utils/clish/var.h"
+#include "target-utils/clish/var.h"
 
 /*---------------------------------------------------------
  * PRIVATE TYPES

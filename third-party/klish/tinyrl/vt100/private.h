@@ -1,4 +1,4 @@
-#include "target_utils/tinyrl/vt100.h"
+#include "target-utils/tinyrl/vt100.h"
 
 struct _tinyrl_vt100 {
 	FILE *istream;

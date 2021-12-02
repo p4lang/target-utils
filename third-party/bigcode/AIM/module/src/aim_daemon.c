@@ -23,9 +23,9 @@
  *
  *
  *****************************************************************************/
-#include <target_utils/AIM/aim_config.h>
-#include <target_utils/AIM/aim_daemon.h>
-#include <target_utils/AIM/aim.h>
+#include <target-utils/AIM/aim_config.h>
+#include <target-utils/AIM/aim_daemon.h>
+#include <target-utils/AIM/aim.h>
 
 #if AIM_CONFIG_INCLUDE_DAEMONIZE == 1
 

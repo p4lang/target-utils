@@ -27,8 +27,8 @@
 #ifndef __AIM_INT_H__
 #define __AIM_INT_H__
 
-#include <target_utils/AIM/aim_config.h>
-#include <target_utils/AIM/aim.h>
+#include <target-utils/AIM/aim_config.h>
+#include <target-utils/AIM/aim.h>
 
 void __aim_module_init__(void);
 void __aim_module_denit__(void);

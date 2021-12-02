@@ -21,8 +21,8 @@
  *
  *
  *****************************************************************************/
-#include <target_utils/AIM/aim_config.h>
-#include <target_utils/AIM/aim_rl.h>
+#include <target-utils/AIM/aim_config.h>
+#include <target-utils/AIM/aim_rl.h>
 #include "aim_int.h"
 #include "aim_util.h"
 

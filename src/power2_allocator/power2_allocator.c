@@ -26,8 +26,8 @@
 #include <stdint.h>
 #include <stdbool.h>
 #include <Judy.h>
-#include <target_utils/bit_utils/bit_utils.h>
-#include <target_utils/power2_allocator/power2_allocator.h>
+#include <target-utils/bit_utils/bit_utils.h>
+#include <target-utils/power2_allocator/power2_allocator.h>
 #include <target_sys/bf_sal/bf_sys_intf.h>
 
 #if 0

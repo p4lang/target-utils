@@ -20,10 +20,10 @@
 #ifndef __OS_LOG_H__
 #define __OS_LOG_H__
 
-#include <target_utils/OS/os_config.h>
+#include <target-utils/OS/os_config.h>
 
 #define AIM_LOG_MODULE_NAME os
-#include <target_utils/AIM/aim_log.h>
+#include <target-utils/AIM/aim_log.h>
 
 
 

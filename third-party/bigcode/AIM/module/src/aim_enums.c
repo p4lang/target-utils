@@ -24,11 +24,11 @@
  *  AIM Enum Definitions
  *
  *****************************************************************************/
-#include <target_utils/AIM/aim_config.h>
-#include <target_utils/AIM/aim.h>
+#include <target-utils/AIM/aim_config.h>
+#include <target-utils/AIM/aim.h>
 #include "aim_int.h"
-#include <target_utils/AIM/aim_log.h>
-#include <target_utils/AIM/aim_error.h>
+#include <target-utils/AIM/aim_log.h>
+#include <target-utils/AIM/aim_error.h>
 
 /* <auto.start.enum(ALL).source> */
 aim_map_si_t aim_log_flag_map[] =

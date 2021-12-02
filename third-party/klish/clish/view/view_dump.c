@@ -4,8 +4,8 @@
  * view_dump.c
  */
 #include "private.h"
-#include "target_utils/lub/dump.h"
-#include "target_utils/lub/list.h"
+#include "target-utils/lub/dump.h"
+#include "target-utils/lub/list.h"
 
 /*--------------------------------------------------------- */
 void clish_view_dump(clish_view_t * this)

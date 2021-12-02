@@ -23,9 +23,9 @@
  *
  *
  *****************************************************************************/
-#include <target_utils/AIM/aim_config.h>
-#include <target_utils/AIM/aim_datatypes.h>
-#include <target_utils/AIM/aim_list.h>
+#include <target-utils/AIM/aim_config.h>
+#include <target-utils/AIM/aim_datatypes.h>
+#include <target-utils/AIM/aim_list.h>
 #include "aim_int.h"
 
 

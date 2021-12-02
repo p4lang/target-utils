@@ -1,8 +1,8 @@
 /*
  * private.h
  */
-#include "target_utils/lub/types.h"
-#include "target_utils/lub/argv.h"
-#include "target_utils/lub/system.h"
+#include "target-utils/lub/types.h"
+#include "target-utils/lub/argv.h"
+#include "target-utils/lub/system.h"
 
 int testcmd(int argc, char *argv[]);

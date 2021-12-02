@@ -4,7 +4,7 @@
  * action_dump.c
  */
 
-#include "target_utils/lub/dump.h"
+#include "target-utils/lub/dump.h"
 #include "private.h"
 
 /*--------------------------------------------------------- */

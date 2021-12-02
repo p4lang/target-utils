@@ -7,12 +7,12 @@
  * ------------------------------------------------------
  */
 #include "private.h"
-#include "target_utils/lub/porting.h"
+#include "target-utils/lub/porting.h"
 #include "xmlapi.h"
-#include "target_utils/lub/string.h"
-#include "target_utils/lub/ctype.h"
-#include "target_utils/lub/system.h"
-#include "target_utils/lub/conv.h"
+#include "target-utils/lub/string.h"
+#include "target-utils/lub/ctype.h"
+#include "target-utils/lub/system.h"
+#include "target-utils/lub/conv.h"
 #include <target_sys/bf_sal/bf_sys_intf.h>
 #include <stdlib.h>
 #include <string.h>

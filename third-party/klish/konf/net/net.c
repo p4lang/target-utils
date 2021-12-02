@@ -10,10 +10,10 @@
 #include <sys/un.h>
 #include <fcntl.h>
 
-#include "target_utils/konf/buf.h"
-#include "target_utils/konf/query.h"
-#include "target_utils/lub/porting.h"
-#include "target_utils/lub/string.h"
+#include "target-utils/konf/buf.h"
+#include "target-utils/konf/query.h"
+#include "target-utils/lub/porting.h"
+#include "target-utils/lub/string.h"
 #include "private.h"
 
 /* UNIX socket name in filesystem */

@@ -2,9 +2,9 @@
  * sym_navy.c
  */
 #include "private.h"
-#include "target_utils/lub/string.h"
-#include "target_utils/lub/argv.h"
-#include "target_utils/lub/conv.h"
+#include "target-utils/lub/string.h"
+#include "target-utils/lub/argv.h"
+#include "target-utils/lub/conv.h"
 
 #include <assert.h>
 #include <stdio.h>

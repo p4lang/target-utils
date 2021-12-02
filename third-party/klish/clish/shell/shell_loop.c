@@ -2,7 +2,7 @@
  * shell_loop.c
  */
 #include "private.h"
-#include "target_utils/lub/string.h"
+#include "target-utils/lub/string.h"
 
 #include <stdio.h>
 #include <stdlib.h>

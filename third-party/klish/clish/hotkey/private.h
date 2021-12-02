@@ -2,7 +2,7 @@
  * hotkey private.h
  */
 
-#include "target_utils/clish/hotkey.h"
+#include "target-utils/clish/hotkey.h"
 
 /*---------------------------------------------------------
  * PRIVATE TYPES

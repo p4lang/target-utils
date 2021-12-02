@@ -18,12 +18,12 @@
  ***************************************************************/
 
 #include "ucli_int.h"
-#include <target_utils/uCli/ucli.h>
-#include <target_utils/uCli/ucli_config.h>
-#include <target_utils/uCli/ucli_argparse.h>
-#include <target_utils/BigList/biglist.h>
+#include <target-utils/uCli/ucli.h>
+#include <target-utils/uCli/ucli_config.h>
+#include <target-utils/uCli/ucli_argparse.h>
+#include <target-utils/BigList/biglist.h>
 #include <inttypes.h>
-#include <target_utils/AIM/aim_datatypes.h>
+#include <target-utils/AIM/aim_datatypes.h>
 
 int
 ucli_vargparse_try(ucli_context_t* uc, const char* fmt, aim_va_list_t* vargs)

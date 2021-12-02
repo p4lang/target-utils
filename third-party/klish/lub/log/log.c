@@ -1,6 +1,6 @@
-#include "target_utils/lub/log.h"
+#include "target-utils/lub/log.h"
 #include <syslog.h>
-#include "target_utils/lub/string.h"
+#include "target-utils/lub/string.h"
 
 int lub_log_facility(const char *str, int *facility)
 {

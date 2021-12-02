@@ -23,10 +23,10 @@
  *
  *
  *****************************************************************************/
-#include <target_utils/AIM/aim_config.h>
-#include <target_utils/AIM/aim_pvs.h>
-#include <target_utils/AIM/aim_printf.h>
-#include <target_utils/AIM/aim_utils.h>
+#include <target-utils/AIM/aim_config.h>
+#include <target-utils/AIM/aim_pvs.h>
+#include <target-utils/AIM/aim_printf.h>
+#include <target-utils/AIM/aim_utils.h>
 #include <stdio.h>
 
 int

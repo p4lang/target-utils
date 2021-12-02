@@ -4,7 +4,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#include "target_utils/clish/plugin.h"
+#include "target-utils/clish/plugin.h"
 #include "private.h"
 
 /*----------------------------------------------------------- */

@@ -24,8 +24,8 @@
  ***********************************************************/
 
 
-#include <target_utils/ELS/els_config.h>
-#include <target_utils/ELS/els.h>
+#include <target-utils/ELS/els_config.h>
+#include <target-utils/ELS/els.h>
 #include "els_int.h"
 #include "els_log.h"
 

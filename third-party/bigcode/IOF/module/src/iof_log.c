@@ -17,8 +17,8 @@
  *
  ***************************************************************/
 
-#include <target_utils/IOF/iof_config.h>
-#include <target_utils/IOF/iof.h>
+#include <target-utils/IOF/iof_config.h>
+#include <target-utils/IOF/iof.h>
 #include "iof_log.h"
 
 AIM_LOG_STRUCT_DEFINE(

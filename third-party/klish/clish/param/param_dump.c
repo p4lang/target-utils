@@ -4,7 +4,7 @@
  * param_dump.c
  */
 #include "private.h"
-#include "target_utils/lub/dump.h"
+#include "target-utils/lub/dump.h"
 /*--------------------------------------------------------- */
 void clish_param_dump(const clish_param_t * this)
 {

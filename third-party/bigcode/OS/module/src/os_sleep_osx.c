@@ -17,8 +17,8 @@
  *
  ***************************************************************/
 
-#include <target_utils/OS/os_config.h>
-#include <target_utils/OS/os_sleep.h>
+#include <target-utils/OS/os_config.h>
+#include <target-utils/OS/os_sleep.h>
 
 #if OS_CONFIG_INCLUDE_OSX == 1
 #undef OS_CONFIG_INCLUDE_POSIX

@@ -10,7 +10,7 @@
 #include <sys/select.h>
 #include <errno.h>
 
-#include "target_utils/lub/porting.h"
+#include "target-utils/lub/porting.h"
 #include "private.h"
 
 typedef struct {

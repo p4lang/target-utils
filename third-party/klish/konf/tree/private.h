@@ -4,9 +4,9 @@
 #ifndef _konf_tree_private_h
 #define _konf_tree_private_h
 
-#include "target_utils/konf/tree.h"
-#include "target_utils/lub/types.h"
-#include "target_utils/lub/list.h"
+#include "target-utils/konf/tree.h"
+#include "target-utils/lub/types.h"
+#include "target-utils/lub/list.h"
 
 /*---------------------------------------------------------
  * PRIVATE TYPES

@@ -7,7 +7,7 @@
 #endif /* HAVE_CONFIG_H */
 
 #include <stdlib.h>
-#include "target_utils/clish/plugin.h"
+#include "target-utils/clish/plugin.h"
 
 /* Declare builtin plugin's init functions */
 

@@ -13,11 +13,11 @@
 #include <errno.h>
 #include <ctype.h>
 
-#include "target_utils/tinyrl/tinyrl.h"
-#include "target_utils/tinyrl/history.h"
+#include "target-utils/tinyrl/tinyrl.h"
+#include "target-utils/tinyrl/history.h"
 
-#include "target_utils/lub/porting.h"
-#include "target_utils/lub/string.h"
+#include "target-utils/lub/porting.h"
+#include "target-utils/lub/string.h"
 
 /*-------------------------------------------------------- */
 static void clish_shell_renew_prompt(clish_shell_t *this)

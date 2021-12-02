@@ -2,8 +2,8 @@
  * shell_help.c
  */
 #include "private.h"
-#include "target_utils/clish/types.h"
-#include "target_utils/lub/string.h"
+#include "target-utils/clish/types.h"
+#include "target-utils/lub/string.h"
 
 #include <stdio.h>
 #include <string.h>

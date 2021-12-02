@@ -33,12 +33,12 @@
 #include <termios.h>
 #include <target_sys/bf_sal/bf_sys_sem.h>
 
-#include "target_utils/lub/porting.h"
-#include "target_utils/lub/list.h"
-#include "target_utils/lub/system.h"
-#include "target_utils/lub/log.h"
-#include "target_utils/lub/conv.h"
-#include "target_utils/clish/shell.h"
+#include "target-utils/lub/porting.h"
+#include "target-utils/lub/list.h"
+#include "target-utils/lub/system.h"
+#include "target-utils/lub/log.h"
+#include "target-utils/lub/conv.h"
+#include "target-utils/clish/shell.h"
 
 typedef struct cli_thread_args {
 	FILE *in;

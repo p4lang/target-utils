@@ -4,8 +4,8 @@
 #include <string.h>
 
 #include "private.h"
-#include "target_utils/lub/string.h"
-#include "target_utils/lub/argv.h"
+#include "target-utils/lub/string.h"
+#include "target-utils/lub/argv.h"
 
 /*-------------------------------------------------------- */
 void clish_shell_iterator_init(clish_shell_iterator_t * iter,

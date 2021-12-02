@@ -34,7 +34,7 @@ include_directories(${CMAKE_CURRENT_SOURCE_DIR}/third-party/xxHash)
 add_subdirectory(src)
 add_subdirectory(third-party)
 
-file(COPY include/target_utils DESTINATION ${CMAKE_INSTALL_PREFIX}/include
+file(COPY include/target-utils DESTINATION ${CMAKE_INSTALL_PREFIX}/include
   PATTERN "*.doxy" EXCLUDE
   PATTERN "*.am" EXCLUDE)
 

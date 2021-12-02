@@ -3,7 +3,7 @@
 #include <string.h>
 
 #include "private.h"
-#include "target_utils/lub/porting.h"
+#include "target-utils/lub/porting.h"
 
 /*--------------------------------------------------------- */
 static inline void lub_list_init(lub_list_t * this,

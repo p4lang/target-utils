@@ -15,7 +15,7 @@
  */
 
 #include <string.h>
-#include <target_utils/bitset/bitset.h>
+#include <target-utils/bitset/bitset.h>
 #include <Judy.h>
 #include <target_sys/bf_sal/bf_sys_intf.h>
 

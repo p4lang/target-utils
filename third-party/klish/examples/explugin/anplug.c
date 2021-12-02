@@ -1,8 +1,8 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-#include "target_utils/clish/plugin.h"
-#include "target_utils/lub/ini.h"
+#include "target-utils/clish/plugin.h"
+#include "target-utils/lub/ini.h"
 
 CLISH_PLUGIN_SYM(anplug_fn)
 {

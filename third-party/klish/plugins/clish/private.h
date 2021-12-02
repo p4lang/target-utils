@@ -2,8 +2,8 @@
  * builtin private.h
  */
 
-#include "target_utils/clish/plugin.h"
-#include "target_utils/clish/shell.h"
+#include "target-utils/clish/plugin.h"
+#include "target-utils/clish/shell.h"
 
 /* Hooks */
 CLISH_HOOK_ACCESS(clish_hook_access);

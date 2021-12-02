@@ -6,11 +6,11 @@
 #include <string.h>
 #include <dlfcn.h>
 
-#include "target_utils/lub/string.h"
-#include "target_utils/lub/list.h"
-#include "target_utils/lub/bintree.h"
-#include "target_utils/clish/plugin.h"
-#include "target_utils/clish/view.h"
+#include "target-utils/lub/string.h"
+#include "target-utils/lub/list.h"
+#include "target-utils/lub/bintree.h"
+#include "target-utils/clish/plugin.h"
+#include "target-utils/clish/view.h"
 
 /*----------------------------------------------------------------------- */
 clish_plugin_t * clish_shell_find_plugin(clish_shell_t *this, const char *name)

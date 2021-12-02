@@ -20,16 +20,16 @@
  * aim_datatypes.c
  *
  ***************************************************************/
-#include <target_utils/AIM/aim_config.h>
-#include <target_utils/AIM/aim_datatypes.h>
-#include <target_utils/AIM/aim_utils.h>
-#include <target_utils/AIM/aim_string.h>
-#include <target_utils/AIM/aim_log.h>
-#include <target_utils/AIM/aim_list.h>
-#include <target_utils/AIM/aim_error.h>
-#include <target_utils/AIM/aim_bitmap.h>
-#include <target_utils/AIM/aim_pvs_buffer.h>
-#include <target_utils/AIM/aim_memory.h>
+#include <target-utils/AIM/aim_config.h>
+#include <target-utils/AIM/aim_datatypes.h>
+#include <target-utils/AIM/aim_utils.h>
+#include <target-utils/AIM/aim_string.h>
+#include <target-utils/AIM/aim_log.h>
+#include <target-utils/AIM/aim_list.h>
+#include <target-utils/AIM/aim_error.h>
+#include <target-utils/AIM/aim_bitmap.h>
+#include <target-utils/AIM/aim_pvs_buffer.h>
+#include <target-utils/AIM/aim_memory.h>
 
 #if AIM_CONFIG_INCLUDE_POSIX == 1
 #include <string.h>

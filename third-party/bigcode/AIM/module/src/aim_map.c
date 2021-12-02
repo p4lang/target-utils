@@ -23,8 +23,8 @@
  *
  *
  *****************************************************************************/
-#include <target_utils/AIM/aim_config.h>
-#include <target_utils/AIM/aim_map.h>
+#include <target-utils/AIM/aim_config.h>
+#include <target-utils/AIM/aim_map.h>
 
 int
 aim_map_si_s(int* rv, const char* s, aim_map_si_t* maps, unsigned int count)

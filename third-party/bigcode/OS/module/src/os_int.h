@@ -21,9 +21,9 @@
 #define __OS_INT_H__
 
 
-#include <target_utils/OS/os_config.h>
+#include <target-utils/OS/os_config.h>
 
 
 
-#include <target_utils/OS/os.h>
+#include <target-utils/OS/os.h>
 #endif /* __OS_INT_H__ */

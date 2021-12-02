@@ -21,8 +21,8 @@
 #define __BIGLIST_LOG_H__
 
 
-#include <target_utils/BigList/biglist_config.h>
+#include <target-utils/BigList/biglist_config.h>
 
 #define AIM_LOG_MODULE_NAME biglist
-#include <target_utils/AIM/aim_log.h>
+#include <target-utils/AIM/aim_log.h>
 #endif /* __BIGLIST_LOG_H__ */

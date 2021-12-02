@@ -23,12 +23,12 @@
  *
  *
  *****************************************************************************/
-#include <target_utils/AIM/aim_config.h>
-#include <target_utils/AIM/aim_datatypes.h>
-#include <target_utils/AIM/aim_pvs.h>
-#include <target_utils/AIM/aim_string.h>
-#include <target_utils/AIM/aim_pvs_buffer.h>
-#include <target_utils/AIM/aim_memory.h>
+#include <target-utils/AIM/aim_config.h>
+#include <target-utils/AIM/aim_datatypes.h>
+#include <target-utils/AIM/aim_pvs.h>
+#include <target-utils/AIM/aim_string.h>
+#include <target-utils/AIM/aim_pvs_buffer.h>
+#include <target-utils/AIM/aim_memory.h>
 #include <inttypes.h>
 #include <stddef.h>
 

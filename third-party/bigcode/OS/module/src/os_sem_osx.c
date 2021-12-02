@@ -17,8 +17,8 @@
  *
  ***************************************************************/
 
-#include <target_utils/OS/os_config.h>
-#include <target_utils/OS/os_sem.h>
+#include <target-utils/OS/os_config.h>
+#include <target-utils/OS/os_sem.h>
 
 #if OS_CONFIG_INCLUDE_OSX == 1
 #undef OS_CONFIG_INCLUDE_POSIX

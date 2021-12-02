@@ -17,7 +17,7 @@
  *
  ***************************************************************/
 
-#include <target_utils/IOF/iof.h>
+#include <target-utils/IOF/iof.h>
 #include "iof_log.h"
 
 static int

@@ -6,8 +6,8 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include "target_utils/lub/porting.h"
-#include "target_utils/lub/ctype.h"
+#include "target-utils/lub/porting.h"
+#include "target-utils/lub/ctype.h"
 
 const char *lub_string_esc_default = "`|$<>&()#;\\\"!";
 const char *lub_string_esc_regex = "^$.*+[](){}";

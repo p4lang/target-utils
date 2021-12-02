@@ -32,7 +32,7 @@
 #include <sys/stat.h>
 #include <unistd.h>
 #include <errno.h>
-#include "target_utils/lub/porting.h"
+#include "target-utils/lub/porting.h"
 
 /* FreeBSD have verbatim version of expat named bsdxml */
 #ifdef HAVE_LIB_BSDXML

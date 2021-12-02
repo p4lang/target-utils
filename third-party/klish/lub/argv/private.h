@@ -4,7 +4,7 @@
  * Class to deal with splitting a command line into multiple arguments.
  * This class deals with full quoted text "like this" as a single argument.
  */
-#include "target_utils/lub/argv.h"
+#include "target-utils/lub/argv.h"
 
 typedef struct lub_arg_s lub_arg_t;
 struct lub_arg_s {

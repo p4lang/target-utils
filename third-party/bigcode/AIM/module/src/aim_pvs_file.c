@@ -23,11 +23,11 @@
  *
  *
  *****************************************************************************/
-#include <target_utils/AIM/aim_config.h>
-#include <target_utils/AIM/aim_pvs_file.h>
-#include <target_utils/AIM/aim_string.h>
-#include <target_utils/AIM/aim_utils.h>
-#include <target_utils/AIM/aim_memory.h>
+#include <target-utils/AIM/aim_config.h>
+#include <target-utils/AIM/aim_pvs_file.h>
+#include <target-utils/AIM/aim_string.h>
+#include <target-utils/AIM/aim_utils.h>
+#include <target-utils/AIM/aim_memory.h>
 #include "aim_util.h"
 
 #if AIM_CONFIG_PVS_INCLUDE_TTY == 1

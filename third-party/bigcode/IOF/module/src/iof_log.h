@@ -20,8 +20,8 @@
 #ifndef __IOF_LOG_H__
 #define __IOF_LOG_H__
 
-#include <target_utils/IOF/iof_config.h>
+#include <target-utils/IOF/iof_config.h>
 #define AIM_LOG_MODULE_NAME iof
-#include <target_utils/AIM/aim_log.h>
+#include <target-utils/AIM/aim_log.h>
 
 #endif /* __IOF_LOG_H__ */

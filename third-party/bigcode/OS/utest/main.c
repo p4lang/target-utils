@@ -17,14 +17,14 @@
  *
  ***************************************************************/
 
-#include <target_utils/OS/os_config.h>
-#include <target_utils/OS/os.h>
+#include <target-utils/OS/os_config.h>
+#include <target-utils/OS/os.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
-#include <target_utils/OS/os_sem.h>
-#include <target_utils/OS/os_time.h>
+#include <target-utils/OS/os_sem.h>
+#include <target-utils/OS/os_time.h>
 #include <inttypes.h>
 
 int main(int argc, char* argv[])

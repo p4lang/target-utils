@@ -27,6 +27,6 @@
 #define __AIM_INTERNAL_LOG_H__
 
 #define AIM_LOG_MODULE_NAME aim
-#include <target_utils/AIM/aim_log.h>
+#include <target-utils/AIM/aim_log.h>
 
 #endif /* __AIM_INTERNAL_LOG_H__ */
