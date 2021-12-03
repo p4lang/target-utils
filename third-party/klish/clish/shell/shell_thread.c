@@ -31,7 +31,7 @@
 #include <sys/socket.h>
 #include <arpa/inet.h>
 #include <termios.h>
-#include <target_sys/bf_sal/bf_sys_sem.h>
+#include <target-sys/bf_sal/bf_sys_sem.h>
 
 #include "target-utils/lub/porting.h"
 #include "target-utils/lub/list.h"

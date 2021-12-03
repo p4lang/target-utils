@@ -21,7 +21,7 @@
 #ifndef __MAP_LOG_H__
 #define __MAP_LOG_H__
 
-#include <target_sys/bf_sal/bf_sys_intf.h>
+#include <target-sys/bf_sal/bf_sys_intf.h>
 
 #define LOG_ERROR(...) \
   bf_sys_log_and_trace(BF_MOD_UTIL, BF_LOG_ERR, __VA_ARGS__)

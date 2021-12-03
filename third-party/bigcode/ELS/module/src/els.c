@@ -28,11 +28,11 @@
 #include "els_log.h"
 #include <memory.h>
 #include <stdlib.h>
-#include <target_sys/bf_sal/bf_sys_sem.h>
+#include <target-sys/bf_sal/bf_sys_sem.h>
 #include <signal.h>
 #include <unistd.h>
 #include <errno.h>
-#include <target_sys/bf_sal/bf_sys_thread.h>
+#include <target-sys/bf_sal/bf_sys_thread.h>
 
 #if ELS_CONFIG_INCLUDE_EVENTFD == 1
 #include <sys/eventfd.h>

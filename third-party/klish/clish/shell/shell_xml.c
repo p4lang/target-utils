@@ -13,7 +13,7 @@
 #include "target-utils/lub/ctype.h"
 #include "target-utils/lub/system.h"
 #include "target-utils/lub/conv.h"
-#include <target_sys/bf_sal/bf_sys_intf.h>
+#include <target-sys/bf_sal/bf_sys_intf.h>
 #include <stdlib.h>
 #include <string.h>
 #include <assert.h>

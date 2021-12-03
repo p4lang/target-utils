@@ -35,7 +35,7 @@
 #include <target-utils/BigList/biglist_config.h>
 
 #if BIGLIST_CONFIG_INCLUDE_LOCKED == 1
-#include <target_sys/bf_sal/bf_sys_sem.h>
+#include <target-sys/bf_sal/bf_sys_sem.h>
 #endif
 
 /**

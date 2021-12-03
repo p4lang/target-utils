@@ -28,7 +28,7 @@
 
 // JUDY INCLUDE FILES
 #include "Judy.h"
-#include <target_sys/bf_sal/bf_sys_mem.h>
+#include <target-sys/bf_sal/bf_sys_mem.h>
 
 // ****************************************************************************
 // J U D Y   M A L L O C

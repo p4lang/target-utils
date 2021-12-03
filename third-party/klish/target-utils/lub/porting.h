@@ -5,10 +5,10 @@
 #ifndef _lub_porting_h
 #define _lub_porting_h
 
-#include <target_sys/bf_sal/bf_sys_mem.h>
-#include <target_sys/bf_sal/bf_sys_sem.h>
-#include <target_sys/bf_sal/bf_sys_str.h>
-#include <target_sys/bf_sal/bf_sys_thread.h>
+#include <target-sys/bf_sal/bf_sys_mem.h>
+#include <target-sys/bf_sal/bf_sys_sem.h>
+#include <target-sys/bf_sal/bf_sys_str.h>
+#include <target-sys/bf_sal/bf_sys_thread.h>
 
 #define lub_malloc bf_sys_malloc
 #define lub_calloc bf_sys_calloc

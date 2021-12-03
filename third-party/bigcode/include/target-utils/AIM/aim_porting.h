@@ -44,7 +44,7 @@
 #include <memory.h>
 #endif
 
-#include <target_sys/bf_sal/bf_sys_mem.h>
+#include <target-sys/bf_sal/bf_sys_mem.h>
 #define AIM_MALLOC bf_sys_malloc
 #define AIM_CALLOC bf_sys_calloc
 #define AIM_REALLOC bf_sys_realloc

@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-#include <target_sys/bf_sal/bf_sys_intf.h>
+#include <target-sys/bf_sal/bf_sys_intf.h>
 #include <tommyhashlin.h>
 #include "target-utils/hashtbl/bf_hashtbl.h"
 #include "xxhash.h"
