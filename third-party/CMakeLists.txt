@@ -12,12 +12,12 @@ if (STANDALONE)
   include_directories(${CMAKE_CURRENT_SOURCE_DIR}/target-syslibs/include)
 endif()
 
-# include_directories(${CMAKE_CURRENT_SOURCE_DIR}/bigcode/include/target_utils)
-# include_directories(${CMAKE_CURRENT_SOURCE_DIR}/cJSON)
-# include_directories(${CMAKE_CURRENT_SOURCE_DIR}/judy-1.0.5/src)
-# include_directories(${CMAKE_CURRENT_SOURCE_DIR}/klish/target_utils)
-# include_directories(${CMAKE_CURRENT_SOURCE_DIR}/tommyds/tommyds)
-# include_directories(${CMAKE_CURRENT_SOURCE_DIR}/xxHash/)
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/bigcode/include/target_utils)
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/cJSON)
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/judy-1.0.5/src)
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/klish/target_utils)
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/tommyds/tommyds)
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/xxHash/)
 
 
 function(buildTommyds)
