@@ -33,12 +33,12 @@
 #include <langinfo.h>
 #endif
 
-#include "target_utils/lub/porting.h"
-#include "target_utils/lub/list.h"
-#include "target_utils/lub/system.h"
-#include "target_utils/lub/log.h"
-#include "target_utils/lub/conv.h"
-#include "target_utils/clish/shell.h"
+#include "target-utils/lub/porting.h"
+#include "target-utils/lub/list.h"
+#include "target-utils/lub/system.h"
+#include "target-utils/lub/log.h"
+#include "target-utils/lub/conv.h"
+#include "target-utils/clish/shell.h"
 
 #define QUOTE(t) #t
 /* #define version(v) printf("%s\n", QUOTE(v)) */

@@ -4,7 +4,7 @@
  * pargv_dump.c
  */
 #include "private.h"
-#include "target_utils/lub/dump.h"
+#include "target-utils/lub/dump.h"
 
 /*--------------------------------------------------------- */
 void clish_parg_dump(const clish_parg_t * this)

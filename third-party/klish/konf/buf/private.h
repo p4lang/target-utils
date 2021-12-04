@@ -4,8 +4,8 @@
 #ifndef _konf_buf_private_h
 #define _konf_buf_private_h
 
-#include "target_utils/konf/buf.h"
-#include "target_utils/lub/bintree.h"
+#include "target-utils/konf/buf.h"
+#include "target-utils/lub/bintree.h"
 
 /*---------------------------------------------------------
  * PRIVATE TYPES

@@ -4,8 +4,8 @@
 #include "private.h"
 #include <assert.h>
 
-#include "target_utils/tinyrl/tinyrl.h"
-#include "target_utils/lub/string.h"
+#include "target-utils/tinyrl/tinyrl.h"
+#include "target-utils/lub/string.h"
 
 /*----------------------------------------------------------------------- */
 int clish_shell_timeout_fn(tinyrl_t *tinyrl)

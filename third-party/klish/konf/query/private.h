@@ -1,8 +1,8 @@
 #ifndef _konf_query_private_h
 #define _konf_query_private_h
 
-#include "target_utils/konf/query.h"
-#include "target_utils/lub/types.h"
+#include "target-utils/konf/query.h"
+#include "target-utils/lub/types.h"
 
 struct konf_query_s {
 	konf_query_op_e op;

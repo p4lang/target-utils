@@ -20,10 +20,10 @@
 #include <grp.h>
 #endif
 
-#include "target_utils/lub/porting.h"
-#include "target_utils/lub/string.h"
-#include "target_utils/lub/db.h"
-#include "target_utils/clish/shell.h"
+#include "target-utils/lub/porting.h"
+#include "target-utils/lub/string.h"
+#include "target-utils/lub/db.h"
+#include "target-utils/clish/shell.h"
 
 /*--------------------------------------------------------- */
 /* Return values:

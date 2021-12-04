@@ -22,10 +22,10 @@
 #endif
 #endif
 
-#include "target_utils/konf/net.h"
-#include "target_utils/konf/query.h"
-#include "target_utils/konf/buf.h"
-#include "target_utils/lub/string.h"
+#include "target-utils/konf/net.h"
+#include "target-utils/konf/query.h"
+#include "target-utils/konf/buf.h"
+#include "target-utils/lub/string.h"
 
 #ifndef VERSION
 #define VERSION 1.2.2

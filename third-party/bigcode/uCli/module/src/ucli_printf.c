@@ -17,9 +17,9 @@
  *
  ***************************************************************/
 
-#include <target_utils/uCli/ucli_config.h>
-#include <target_utils/uCli/ucli.h>
-#include <target_utils/uCli/ucli_common.h>
+#include <target-utils/uCli/ucli_config.h>
+#include <target-utils/uCli/ucli.h>
+#include <target-utils/uCli/ucli_common.h>
 
 int
 ucli_pvs_vprintf(aim_pvs_t* pvs, const char* fmt, va_list vargs)

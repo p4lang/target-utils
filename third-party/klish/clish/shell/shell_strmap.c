@@ -4,11 +4,11 @@
 
 #include <stdio.h>
 #include <string.h>
-#include "target_utils/clish/shell.h"
+#include "target-utils/clish/shell.h"
 #include "private.h"
-#include "target_utils/lub/bintree.h"
-#include "target_utils/lub/string.h"
-#include "target_utils/lub/porting.h"
+#include "target-utils/lub/bintree.h"
+#include "target-utils/lub/string.h"
+#include "target-utils/lub/porting.h"
 
 typedef struct {
     lub_bintree_node_t node;

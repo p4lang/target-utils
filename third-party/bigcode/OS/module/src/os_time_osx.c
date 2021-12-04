@@ -17,8 +17,8 @@
  *
  ***************************************************************/
 
-#include <target_utils/OS/os_config.h>
-#include <target_utils/OS/os_time.h>
+#include <target-utils/OS/os_config.h>
+#include <target-utils/OS/os_time.h>
 
 #if OS_CONFIG_INCLUDE_OSX == 1
 

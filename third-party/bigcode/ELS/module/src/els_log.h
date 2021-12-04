@@ -25,10 +25,10 @@
 #ifndef __ELS_LOG_H__
 #define __ELS_LOG_H__
 
-#include <target_utils/ELS/els_config.h>
+#include <target-utils/ELS/els_config.h>
 
 #define AIM_LOG_MODULE_NAME els
-#include <target_utils/AIM/aim_log.h>
+#include <target-utils/AIM/aim_log.h>
 
 
 #endif /* __ELS_LOG_H__ */

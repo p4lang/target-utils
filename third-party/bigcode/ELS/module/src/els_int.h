@@ -27,7 +27,7 @@
 #define __ELS_INT_H__
 
 
-#include <target_utils/ELS/els_config.h>
-#include <target_utils/ELS/els.h>
+#include <target-utils/ELS/els_config.h>
+#include <target-utils/ELS/els.h>
 
 #endif /* __ELS_INT_H__ */

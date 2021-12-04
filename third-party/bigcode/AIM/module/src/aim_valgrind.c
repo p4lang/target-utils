@@ -23,8 +23,8 @@
  *
  *
  *****************************************************************************/
-#include <target_utils/AIM/aim_config.h>
-#include <target_utils/AIM/aim_valgrind.h>
+#include <target-utils/AIM/aim_config.h>
+#include <target-utils/AIM/aim_valgrind.h>
 
 #if AIM_CONFIG_INCLUDE_VALGRIND == 1
 #include <valgrind/valgrind.h>

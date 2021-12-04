@@ -1,10 +1,10 @@
 /*
  * view.h
  */
-#include "target_utils/clish/view.h"
-#include "target_utils/lub/bintree.h"
-#include "target_utils/lub/list.h"
-#include "target_utils/clish/hotkey.h"
+#include "target-utils/clish/view.h"
+#include "target-utils/lub/bintree.h"
+#include "target-utils/lub/list.h"
+#include "target-utils/clish/hotkey.h"
 
 /*---------------------------------------------------------
  * PRIVATE TYPES

@@ -24,16 +24,16 @@
  *  AIM Unit Testing
  *
  *****************************************************************************/
-#include <target_utils/AIM/aim_config.h>
-#include <target_utils/AIM/aim.h>
+#include <target-utils/AIM/aim_config.h>
+#include <target-utils/AIM/aim.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <assert.h>
-#include <target_utils/AIM/aim_rl.h>
+#include <target-utils/AIM/aim_rl.h>
 
 #define AIM_LOG_MODULE_NAME aim_utest
-#include <target_utils/AIM/aim_log.h>
+#include <target-utils/AIM/aim_log.h>
 
 AIM_LOG_STRUCT_DEFINE(1, 0xFFFF, NULL, 0);
 

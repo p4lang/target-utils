@@ -2,7 +2,7 @@
  * action.h
  */
 
-#include "target_utils/clish/action.h"
+#include "target-utils/clish/action.h"
 
 /*---------------------------------------------------------
  * PRIVATE TYPES

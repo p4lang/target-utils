@@ -26,11 +26,11 @@
  * @{
  *
  *****************************************************************************/
-#include <target_utils/AIM/aim_config.h>
-#include <target_utils/AIM/aim_sparse.h>
-#include <target_utils/AIM/aim_datatypes.h>
-#include <target_utils/AIM/aim_error.h>
-#include <target_utils/AIM/aim_printf.h>
+#include <target-utils/AIM/aim_config.h>
+#include <target-utils/AIM/aim_sparse.h>
+#include <target-utils/AIM/aim_datatypes.h>
+#include <target-utils/AIM/aim_error.h>
+#include <target-utils/AIM/aim_printf.h>
 
 /**
  * @brief Parse the given datatype.

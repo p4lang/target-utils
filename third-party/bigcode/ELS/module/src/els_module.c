@@ -23,7 +23,7 @@
  *
  ***********************************************************/
 
-#include <target_utils/ELS/els_config.h>
+#include <target-utils/ELS/els_config.h>
 #include "els_log.h"
 
 int

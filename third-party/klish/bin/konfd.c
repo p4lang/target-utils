@@ -40,14 +40,14 @@
 #include <grp.h>
 #endif
 
-#include "target_utils/konf/tree.h"
-#include "target_utils/konf/query.h"
-#include "target_utils/konf/buf.h"
-#include "target_utils/konf/net.h"
-#include "target_utils/lub/argv.h"
-#include "target_utils/lub/porting.h"
-#include "target_utils/lub/string.h"
-#include "target_utils/lub/log.h"
+#include "target-utils/konf/tree.h"
+#include "target-utils/konf/query.h"
+#include "target-utils/konf/buf.h"
+#include "target-utils/konf/net.h"
+#include "target-utils/lub/argv.h"
+#include "target-utils/lub/porting.h"
+#include "target-utils/lub/string.h"
+#include "target-utils/lub/log.h"
 
 #ifndef VERSION
 #define VERSION 1.2.2

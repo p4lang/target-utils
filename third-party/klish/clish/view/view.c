@@ -4,11 +4,11 @@
  * This file provides the implementation of a view class
  */
 #include "private.h"
-#include "target_utils/lub/porting.h"
-#include "target_utils/lub/argv.h"
-#include "target_utils/lub/string.h"
-#include "target_utils/lub/ctype.h"
-#include "target_utils/lub/list.h"
+#include "target-utils/lub/porting.h"
+#include "target-utils/lub/argv.h"
+#include "target-utils/lub/string.h"
+#include "target-utils/lub/ctype.h"
+#include "target-utils/lub/list.h"
 
 #include <assert.h>
 #include <stdlib.h>

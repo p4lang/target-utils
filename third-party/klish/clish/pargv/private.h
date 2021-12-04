@@ -1,8 +1,8 @@
 /*
  * pargv.h
  */
-#include "target_utils/clish/pargv.h"
-#include "target_utils/clish/param.h"
+#include "target-utils/clish/pargv.h"
+#include "target-utils/clish/param.h"
 
 /*--------------------------------------------------------- */
 struct clish_parg_s {

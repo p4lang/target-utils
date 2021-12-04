@@ -1,6 +1,6 @@
 /* It must be here to include config.h before another headers */
-#include "target_utils/lub/porting.h"
-#include "target_utils/lub/db.h"
+#include "target-utils/lub/porting.h"
+#include "target-utils/lub/db.h"
 
 #include <stdlib.h>
 #include <errno.h>

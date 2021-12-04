@@ -20,7 +20,6 @@ include_directories(${CMAKE_CURRENT_SOURCE_DIR}/tommyds/tommyds)
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/xxHash/)
 
 
-
 function(buildTommyds)
   include_directories(tommyds/tommyds/)
   add_library(tommyds_o OBJECT
@@ -51,13 +50,18 @@ add_library(xxhash SHARED EXCLUDE_FROM_ALL $<TARGET_OBJECTS:xxhash_o>)
 
 
 # required for standalone builds for other packages
-file(COPY bigcode/include/target_utils DESTINATION ${CMAKE_INSTALL_PREFIX}/include)
-file(COPY cJSON/cJSON.h DESTINATION ${CMAKE_INSTALL_PREFIX}/include/target_utils)
-file(COPY judy-1.0.5/src/Judy.h DESTINATION ${CMAKE_INSTALL_PREFIX}/include/target_utils)
-file(COPY klish/target_utils/ DESTINATION ${CMAKE_INSTALL_PREFIX}/include/target_utils)
-file(COPY tommyds/tommyds/ DESTINATION ${CMAKE_INSTALL_PREFIX}/include/target_utils/tommyds/
+file(COPY bigcode/include/target-utils DESTINATION ${CMAKE_INSTALL_PREFIX}/include)
+file(COPY cJSON/cJSON.h DESTINATION
+  ${CMAKE_INSTALL_PREFIX}/include/target-utils/third-party/cJSON)
+file(COPY judy-1.0.5/src/Judy.h DESTINATION
+  ${CMAKE_INSTALL_PREFIX}/include/target-utils/third-party/judy-1.0.5/src/)
+file(COPY klish/target-utils/ DESTINATION
+  ${CMAKE_INSTALL_PREFIX}/include/target-utils)
+file(COPY tommyds/tommyds/ DESTINATION
+  ${CMAKE_INSTALL_PREFIX}/include/target-utils/third-party/tommyds/tommyds/
   FILES_MATCHING PATTERN *.h)
-file(COPY xxHash DESTINATION ${CMAKE_INSTALL_PREFIX}/include/target_utils
+file(COPY xxHash DESTINATION
+  ${CMAKE_INSTALL_PREFIX}/include/target-utils/third-party/xxHash/
   FILES_MATCHING PATTERN *.h)
 
 

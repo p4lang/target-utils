@@ -21,7 +21,7 @@
 #define __UCLI_UTIL_H__
 
 
-#include <target_utils/uCli/ucli_config.h>
+#include <target-utils/uCli/ucli_config.h>
 
 uint8_t* ucli_util_data_from_string(const char* string, int* size);
 char* ucli_util_data_to_string(ucli_context_t* uc, uint8_t* data, int len,

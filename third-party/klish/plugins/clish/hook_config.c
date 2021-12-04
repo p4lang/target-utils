@@ -14,12 +14,12 @@
 #include <limits.h>
 #include <string.h>
 
-#include "target_utils/konf/net.h"
-#include "target_utils/konf/buf.h"
-#include "target_utils/konf/query.h"
-#include "target_utils/lub/string.h"
-#include "target_utils/lub/conv.h"
-#include "target_utils/clish/shell.h"
+#include "target-utils/konf/net.h"
+#include "target-utils/konf/buf.h"
+#include "target-utils/konf/query.h"
+#include "target-utils/lub/string.h"
+#include "target-utils/lub/conv.h"
+#include "target-utils/clish/shell.h"
 
 static int send_request(konf_client_t * client, char *command);
 

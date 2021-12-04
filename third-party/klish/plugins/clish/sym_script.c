@@ -5,8 +5,8 @@
  */
 
 #include "private.h"
-#include "target_utils/lub/string.h"
-#include "target_utils/konf/buf.h"
+#include "target-utils/lub/string.h"
+#include "target-utils/konf/buf.h"
 
 #include <stdio.h>
 #include <stdlib.h>

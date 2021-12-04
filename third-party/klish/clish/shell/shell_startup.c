@@ -4,7 +4,7 @@
 #include "private.h"
 #include <assert.h>
 
-#include "target_utils/lub/string.h"
+#include "target-utils/lub/string.h"
 
 /* Default hooks */
 const char* clish_plugin_default_hook[] = {

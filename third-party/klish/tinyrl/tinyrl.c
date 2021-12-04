@@ -16,8 +16,8 @@
 /* POSIX HEADERS */
 #include <unistd.h>
 
-#include "target_utils/lub/porting.h"
-#include "target_utils/lub/string.h"
+#include "target-utils/lub/porting.h"
+#include "target-utils/lub/string.h"
 
 #include "private.h"
 

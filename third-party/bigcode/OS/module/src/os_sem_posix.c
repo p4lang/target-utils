@@ -17,13 +17,13 @@
  *
  ***************************************************************/
 
-#include <target_utils/OS/os_config.h>
-#include <target_utils/OS/os_sem.h>
+#include <target-utils/OS/os_config.h>
+#include <target-utils/OS/os_sem.h>
 
 #if OS_CONFIG_INCLUDE_POSIX == 1
 
 
-#include <target_sys/bf_sal/bf_sys_sem.h>
+#include <target-sys/bf_sal/bf_sys_sem.h>
 
 struct os_sem_s {
     bf_sys_sem_t sem;

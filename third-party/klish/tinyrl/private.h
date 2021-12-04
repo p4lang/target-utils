@@ -1,7 +1,7 @@
 #include <termios.h>
 
-#include "target_utils/tinyrl/tinyrl.h"
-#include "target_utils/tinyrl/vt100.h"
+#include "target-utils/tinyrl/tinyrl.h"
+#include "target-utils/tinyrl/vt100.h"
 
 /* define the class member data and virtual methods */
 struct _tinyrl {

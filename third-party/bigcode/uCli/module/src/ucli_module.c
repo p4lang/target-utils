@@ -19,7 +19,7 @@
 
 #include "ucli_int.h"
 
-#include <target_utils/uCli/ucli.h>
+#include <target-utils/uCli/ucli.h>
 #include "ucli_log.h"
 
 #include <stdarg.h>
@@ -27,7 +27,7 @@
 
 #if UCLI_CONFIG_INCLUDE_PTHREADS == 1
 
-#include <target_sys/bf_sal/bf_sys_thread.h>
+#include <target-sys/bf_sal/bf_sys_thread.h>
 
 /**
  * Context for handlers executing in their own threads.

@@ -17,7 +17,7 @@
  *
  ***************************************************************/
 
-#include <target_utils/OS/os_config.h>
+#include <target-utils/OS/os_config.h>
 #include "os_log.h"
 
 void

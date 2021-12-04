@@ -24,14 +24,14 @@
  *  AIM Logger
  *
  *****************************************************************************/
-#include <target_utils/AIM/aim_config.h>
-#include <target_utils/AIM/aim.h>
-#include <target_utils/AIM/aim_utils.h>
-#include <target_utils/AIM/aim_rl.h>
+#include <target-utils/AIM/aim_config.h>
+#include <target-utils/AIM/aim.h>
+#include <target-utils/AIM/aim_utils.h>
+#include <target-utils/AIM/aim_rl.h>
 #include "aim_util.h"
 
 #define AIM_LOG_MODULE_NAME aim
-#include <target_utils/AIM/aim_log.h>
+#include <target-utils/AIM/aim_log.h>
 
 #if AIM_CONFIG_LOG_INCLUDE_ENV_VARIABLES == 1
 static void aim_log_env_init__(aim_log_t* l);

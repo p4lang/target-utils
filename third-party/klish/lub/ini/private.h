@@ -4,9 +4,9 @@
  * Class to parse ini-like strings/files.
  */
 
-#include "target_utils/lub/string.h"
-#include "target_utils/lub/list.h"
-#include "target_utils/lub/ini.h"
+#include "target-utils/lub/string.h"
+#include "target-utils/lub/list.h"
+#include "target-utils/lub/ini.h"
 
 struct lub_pair_s {
 	char *name;

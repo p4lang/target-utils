@@ -16,11 +16,11 @@
  * License.
  *
  ***************************************************************/
-#include <target_utils/uCli/ucli_config.h>
+#include <target-utils/uCli/ucli_config.h>
 #include "ucli_int.h"
 #include "ucli_log.h"
-#include <target_utils/IOF/iof.h>
-#include <target_utils/uCli/ucli_argparse.h>
+#include <target-utils/IOF/iof.h>
+#include <target-utils/uCli/ucli_argparse.h>
 
 #if UCLI_CONFIG_INCLUDE_TTY == 1
 #include <unistd.h>
@@ -914,7 +914,7 @@ ucli_group_help(ucli_t* uc, const char* group, aim_pvs_t* pvs, const char* pfx)
 
 
 #if UCLI_CONFIG_INCLUDE_ELS_LOOP == 1
-#include <target_utils/ELS/els.h>
+#include <target-utils/ELS/els.h>
 static const char* els_base_prompt__ = NULL;
 static int
 ucli_els_prompt__(char* p, int size, void* cookie)

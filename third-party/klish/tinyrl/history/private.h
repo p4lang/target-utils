@@ -1,5 +1,5 @@
 /* private.h */
-#include "target_utils/tinyrl/history.h"
+#include "target-utils/tinyrl/history.h"
 /**************************************
  * protected interface to tinyrl_history_entry class
  ************************************** */

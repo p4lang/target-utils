@@ -2,10 +2,10 @@
  * pargv.c
  */
 #include "private.h"
-#include "target_utils/lub/porting.h"
-#include "target_utils/lub/string.h"
-#include "target_utils/lub/argv.h"
-#include "target_utils/lub/system.h"
+#include "target-utils/lub/porting.h"
+#include "target-utils/lub/string.h"
+#include "target-utils/lub/argv.h"
+#include "target-utils/lub/system.h"
 
 #include <stdlib.h>
 #include <string.h>

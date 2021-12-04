@@ -23,8 +23,8 @@
  *
  *
  *****************************************************************************/
-#include <target_utils/AIM/aim_config.h>
-#include <target_utils/AIM/aim_datatypes.h>
+#include <target-utils/AIM/aim_config.h>
+#include <target-utils/AIM/aim_datatypes.h>
 
 void
 __aim_module_init__(void)

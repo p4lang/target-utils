@@ -18,11 +18,11 @@
 #endif
 #endif
 
-#include "target_utils/lub/types.h"
-#include "target_utils/lub/argv.h"
-#include "target_utils/lub/porting.h"
-#include "target_utils/lub/string.h"
-#include "target_utils/lub/conv.h"
+#include "target-utils/lub/types.h"
+#include "target-utils/lub/argv.h"
+#include "target-utils/lub/porting.h"
+#include "target-utils/lub/string.h"
+#include "target-utils/lub/conv.h"
 #include "private.h"
 
 /*-------------------------------------------------------- */

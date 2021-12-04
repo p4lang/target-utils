@@ -2,7 +2,7 @@
  * command.h
  */
 
-#include "target_utils/clish/command.h"
+#include "target-utils/clish/command.h"
 
 /*---------------------------------------------------------
  * PRIVATE TYPES

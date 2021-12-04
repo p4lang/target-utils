@@ -4,7 +4,7 @@
  * nspace_dump.c
  */
 #include "private.h"
-#include "target_utils/lub/dump.h"
+#include "target-utils/lub/dump.h"
 
 /*--------------------------------------------------------- */
 void clish_nspace_dump(const clish_nspace_t * this)

@@ -1,7 +1,7 @@
 #ifdef DEBUG
 
 #include "private.h"
-#include "target_utils/lub/dump.h"
+#include "target-utils/lub/dump.h"
 
 /*-------------------------------------------------------- */
 void konf_query_dump(konf_query_t *this)

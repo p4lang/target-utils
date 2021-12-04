@@ -4,8 +4,8 @@
  * var_dump.c
  */
 
-#include "target_utils/lub/dump.h"
-#include "target_utils/clish/action.h"
+#include "target-utils/lub/dump.h"
+#include "target-utils/clish/action.h"
 #include "private.h"
 
 /*--------------------------------------------------------- */

@@ -7,7 +7,7 @@
 #include <string.h>
 #include <stdio.h>
 
-#include "target_utils/lub/porting.h"
+#include "target-utils/lub/porting.h"
 #include "private.h"
 
 /*--------------------------------------------------------- */

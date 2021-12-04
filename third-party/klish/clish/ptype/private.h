@@ -1,9 +1,9 @@
 /*
  * ptype.h
  */
-#include "target_utils/clish/pargv.h"
-#include "target_utils/lub/bintree.h"
-#include "target_utils/lub/argv.h"
+#include "target-utils/clish/pargv.h"
+#include "target-utils/lub/bintree.h"
+#include "target-utils/lub/argv.h"
 
 #include <sys/types.h>
 #include <regex.h>

@@ -21,14 +21,14 @@
 #define __UCLI_INT_H__
 
 
-#include <target_utils/uCli/ucli_config.h>
-#include <target_utils/uCli/ucli_porting.h>
-#include <target_utils/uCli/ucli_common.h>
-#include <target_utils/uCli/ucli_module.h>
-#include <target_utils/uCli/ucli_node.h>
-#include <target_utils/uCli/ucli.h>
-#include <target_utils/uCli/ucli_errors.h>
-#include <target_utils/IOF/iof.h>
+#include <target-utils/uCli/ucli_config.h>
+#include <target-utils/uCli/ucli_porting.h>
+#include <target-utils/uCli/ucli_common.h>
+#include <target-utils/uCli/ucli_module.h>
+#include <target-utils/uCli/ucli_node.h>
+#include <target-utils/uCli/ucli.h>
+#include <target-utils/uCli/ucli_errors.h>
+#include <target-utils/IOF/iof.h>
 #include "ucli_util.h"
 
 #define UCLI_LOG_OBJ_DEFAULT

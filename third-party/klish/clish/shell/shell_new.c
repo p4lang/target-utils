@@ -10,11 +10,11 @@
 #include <syslog.h>
 #include <limits.h>
 
-#include "target_utils/lub/porting.h"
-#include "target_utils/lub/string.h"
-#include "target_utils/lub/db.h"
-#include "target_utils/lub/list.h"
-#include "target_utils/clish/plugin.h"
+#include "target-utils/lub/porting.h"
+#include "target-utils/lub/string.h"
+#include "target-utils/lub/db.h"
+#include "target-utils/lub/list.h"
+#include "target-utils/clish/plugin.h"
 
 /*-------------------------------------------------------- */
 static void clish_shell_init(clish_shell_t * this,

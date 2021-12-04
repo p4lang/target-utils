@@ -1,5 +1,5 @@
-#include "target_utils/lub/ini.h"
-#include "target_utils/lub/string.h"
+#include "target-utils/lub/ini.h"
+#include "target-utils/lub/string.h"
 
 #include "private.h"
 

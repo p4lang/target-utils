@@ -1,15 +1,15 @@
 /*
  * shell/private.h - private interface to the shell class
  */
-#include "target_utils/lub/bintree.h"
-#include "target_utils/lub/list.h"
-#include "target_utils/tinyrl/tinyrl.h"
-#include "target_utils/clish/shell.h"
-#include "target_utils/clish/pargv.h"
-#include "target_utils/clish/var.h"
-#include "target_utils/clish/action.h"
-#include "target_utils/clish/plugin.h"
-#include "target_utils/clish/udata.h"
+#include "target-utils/lub/bintree.h"
+#include "target-utils/lub/list.h"
+#include "target-utils/tinyrl/tinyrl.h"
+#include "target-utils/clish/shell.h"
+#include "target-utils/clish/pargv.h"
+#include "target-utils/clish/var.h"
+#include "target-utils/clish/action.h"
+#include "target-utils/clish/plugin.h"
+#include "target-utils/clish/udata.h"
 
 /*-------------------------------------
  * PRIVATE TYPES

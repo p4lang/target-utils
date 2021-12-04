@@ -2,7 +2,7 @@
  * clish/config/private.h
  */
 
-#include "target_utils/clish/config.h"
+#include "target-utils/clish/config.h"
 
 /*---------------------------------------------------------
  * PRIVATE TYPES

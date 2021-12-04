@@ -23,7 +23,7 @@
  *
  *
  *****************************************************************************/
-#include <target_utils/AIM/aim_config.h>
+#include <target-utils/AIM/aim_config.h>
 #include "aim_log.h"
 
 void aim_die(const char* function,

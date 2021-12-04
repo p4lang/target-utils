@@ -17,12 +17,12 @@
  *
  ***************************************************************/
 
-#include <target_utils/uCli/ucli.h>
-#include <target_utils/uCli/ucli_handler_macros.h>
-#include <target_utils/AIM/aim_pvs.h>
+#include <target-utils/uCli/ucli.h>
+#include <target-utils/uCli/ucli_handler_macros.h>
+#include <target-utils/AIM/aim_pvs.h>
 
 #if AIM_CONFIG_INCLUDE_PVS_SYSLOG == 1
-#include <target_utils/AIM/aim_pvs_syslog.h>
+#include <target-utils/AIM/aim_pvs_syslog.h>
 #endif
 
 

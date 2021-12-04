@@ -23,14 +23,14 @@
  *
  *
  *****************************************************************************/
-#include <target_utils/AIM/aim_config.h>
+#include <target-utils/AIM/aim_config.h>
 
 #if AIM_CONFIG_INCLUDE_PVS_SYSLOG == 1
 
-#include <target_utils/AIM/aim_pvs_syslog.h>
-#include <target_utils/AIM/aim_utils.h>
-#include <target_utils/AIM/aim_string.h>
-#include <target_utils/AIM/aim_memory.h>
+#include <target-utils/AIM/aim_pvs_syslog.h>
+#include <target-utils/AIM/aim_utils.h>
+#include <target-utils/AIM/aim_string.h>
+#include <target-utils/AIM/aim_memory.h>
 #include "aim_util.h"
 
 AIM_OBJECT_ID_DEFINE(aim_syslog_pvs_obj, "aim_syslog_pvs");

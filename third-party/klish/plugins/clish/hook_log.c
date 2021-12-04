@@ -10,7 +10,7 @@
 #include <sys/types.h>
 #include <pwd.h>
 
-#include "target_utils/clish/shell.h"
+#include "target-utils/clish/shell.h"
 
 #define SYSLOG_IDENT "klish"
 

@@ -20,9 +20,9 @@
 #ifndef __BIGLIST_INT_H__
 #define __BIGLIST_INT_H__
 
-#include <target_utils/BigList/biglist_config.h>
-#include <target_utils/BigList/biglist.h>
-#include <target_utils/BigList/biglist_locked.h>
+#include <target-utils/BigList/biglist_config.h>
+#include <target-utils/BigList/biglist.h>
+#include <target-utils/BigList/biglist_locked.h>
 
 
 #endif /* __BIGLIST_INT_H__ */

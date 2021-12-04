@@ -17,8 +17,8 @@
  *
  ***************************************************************/
 
-#include <target_utils/AIM/aim.h>
-#include <target_utils/IOF/iof.h>
+#include <target-utils/AIM/aim.h>
+#include <target-utils/IOF/iof.h>
 #include <stdio.h>
 #include <stdarg.h>
 

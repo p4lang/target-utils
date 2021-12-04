@@ -2,8 +2,8 @@
  * argv.c
  */
 #include "private.h"
-#include "target_utils/lub/porting.h"
-#include "target_utils/lub/string.h"
+#include "target-utils/lub/porting.h"
+#include "target-utils/lub/string.h"
 
 #include <stdlib.h>
 #include <string.h>

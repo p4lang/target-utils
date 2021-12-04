@@ -17,8 +17,8 @@
  *
  ***************************************************************/
 
-#include <target_utils/OS/os_config.h>
-#include <target_utils/OS/os.h>
+#include <target-utils/OS/os_config.h>
+#include <target-utils/OS/os.h>
 #include "os_int.h"
 
 

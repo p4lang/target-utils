@@ -15,9 +15,9 @@
  */
 
 #include <string.h>
-#include <target_utils/bitset/bitset.h>
+#include <target-utils/bitset/bitset.h>
 #include <Judy.h>
-#include <target_sys/bf_sal/bf_sys_intf.h>
+#include <target-sys/bf_sal/bf_sys_intf.h>
 
 /* Number of uint64_t elements in the BitSet. */
 static inline size_t length(bf_bitset_t *bs) {

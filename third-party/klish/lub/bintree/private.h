@@ -21,7 +21,7 @@
  *---------------------------------------------------------------
  * Copyright (C) 2004 3Com Corporation. All Rights Reserved.
  **************************************************************** */
-#include "target_utils/lub/bintree.h"
+#include "target-utils/lub/bintree.h"
 
 /*************************************************************
  * PRIVATE OPERATIONS

@@ -1,7 +1,7 @@
 /*
  * ctype.c
  */
-#include "target_utils/lub/ctype.h"
+#include "target-utils/lub/ctype.h"
 #include <ctype.h>
 
 /*--------------------------------------------------------- */

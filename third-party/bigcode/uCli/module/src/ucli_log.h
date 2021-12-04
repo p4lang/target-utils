@@ -21,9 +21,9 @@
 #define __UCLI_LOG_H__
 
 
-#include <target_utils/uCli/ucli_config.h>
+#include <target-utils/uCli/ucli_config.h>
 #define AIM_LOG_MODULE_NAME ucli
-#include <target_utils/AIM/aim_log.h>
+#include <target-utils/AIM/aim_log.h>
 
 #define UCLI_MERROR AIM_LOG_MOD_ERROR
 #define UCLI_MINTERNAL AIM_LOG_MOD_INTERNAL

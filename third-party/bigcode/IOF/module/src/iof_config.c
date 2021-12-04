@@ -17,8 +17,8 @@
  *
  ***************************************************************/
 
-#include <target_utils/IOF/iof_config.h>
-#include <target_utils/IOF/iof.h>
+#include <target-utils/IOF/iof_config.h>
+#include <target-utils/IOF/iof.h>
 
 /* <auto.start.cdefs(IOF_CONFIG_HEADER).source> */
 #define __iof_config_STRINGIFY_NAME(_x) #_x

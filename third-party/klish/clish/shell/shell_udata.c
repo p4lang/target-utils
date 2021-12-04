@@ -5,7 +5,7 @@
 #include <string.h>
 
 #include "private.h"
-#include "target_utils/clish/udata.h"
+#include "target-utils/clish/udata.h"
 
 /*-------------------------------------------------------- */
 static lub_list_node_t *find_udata_node(const clish_shell_t *this, const char *name)

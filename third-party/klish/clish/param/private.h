@@ -1,7 +1,7 @@
 /*
  * param.h
  */
-#include "target_utils/clish/param.h"
+#include "target-utils/clish/param.h"
 
 /*---------------------------------------------------------
  * PRIVATE TYPES
