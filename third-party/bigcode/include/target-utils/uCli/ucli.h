@@ -101,6 +101,8 @@ int ucli_module_add(ucli_t* ucli, ucli_module_t* mod);
  */
 int ucli_destroy(ucli_t* ucli);
 
+void ucli_log_file_open(char *fname, ucli_context_t *uc);
+void ucli_log_file_close(ucli_context_t *uc);
 
 /** Echo all commands during dispatch */
 #define UCLI_F_DISPATCH_ECHO_ALL                 (1 << 0)
