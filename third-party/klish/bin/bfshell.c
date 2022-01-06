@@ -255,6 +255,13 @@ int main(int argc, char **argv)
 					in_fd = STDIN_FILENO;
 					continue;
 				}
+				if (input == 3) {
+					printf("\nPlease type Ctrl+\\ for quit from bfshell cli\n");
+				}
+				if (input == 28) {
+					printf("\nQuiting bfshell.\n");
+					break;
+				}
 				if (write(sd, &input, nbytes) != nbytes) {
 					break;
 				}

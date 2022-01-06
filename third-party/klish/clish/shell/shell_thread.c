@@ -64,7 +64,6 @@ static bf_sys_sem_t connect_semaphore;
 static bool default_running;
 static int sd;
 static int out_fd;
-static struct sigaction old_int;
 
 static void update_terminal_size()
 {
@@ -567,24 +566,6 @@ static void terminal_mode(terminal_mode_t mode) {
 	current_mode = mode;
 }
 
-void INTQUIThandler(int sig)
-{
-	printf("Received signal %d\n", sig);
-	if (sig == SIGQUIT) {
-		sigaction(SIGINT, &old_int, NULL);
-		printf("Quiting switchd.\n");
-		close(sd);
-		terminal_mode(TERMINAL_MODE_COOKED);
-		raise(SIGINT);
-		return;
-	}
-	if (sig == SIGINT) {
-		printf("Please type Ctrl+\\ for quit from switchd cli\n");
-		return;
-	}
-	printf("Unexpected signal.\n");
-}
-
 void *default_shell(void *args)
 {
 	(void) args;
@@ -640,19 +621,9 @@ void *default_shell(void *args)
 
 	signal(SIGTTIN, SIG_IGN);
 	signal(SIGTTOU, SIG_IGN);
-	struct sigaction old_quit, old_winch;
-	struct sigaction new_int, new_quit, new_winch;
-	new_int.sa_handler = INTQUIThandler;
-	new_quit.sa_handler = INTQUIThandler;
+	struct sigaction old_winch, new_winch;
 	new_winch.sa_handler = SIGWINCHhandler;
-	sigaction(SIGINT, &new_int, &old_int);
-	sigaction(SIGQUIT, &new_quit, &old_quit);
 	sigaction(SIGWINCH, &new_winch, &old_winch);
-
-	sigset_t mask_sigquit;
-	sigemptyset(&mask_sigquit);
-	sigaddset(&mask_sigquit, SIGQUIT);
-	sigprocmask(SIG_UNBLOCK, &mask_sigquit, NULL);
 
 	terminal_mode(TERMINAL_MODE_RAW);
 
@@ -690,10 +661,10 @@ void *default_shell(void *args)
 				}
 				if (input == 3) {
 					write(STDOUT_FILENO, "\n", 1);
-					raise(SIGINT);
+					kill(getpid(), SIGINT);
 				} else if (input == 28) {
 					write(STDOUT_FILENO, "\n", 1);
-					raise(SIGQUIT);
+					kill(getpid(), SIGQUIT);
 				} else if (input == 26) {
 					write(STDOUT_FILENO, "\n", 1);
 					raise(SIGTSTP);
@@ -705,8 +676,6 @@ void *default_shell(void *args)
 		}
 	}
 
-	sigaction(SIGINT, &old_int, NULL);
-	sigaction(SIGQUIT, &old_quit, NULL);
 	sigaction(SIGWINCH, &old_winch, NULL);
 	close(sd);
 	terminal_mode(TERMINAL_MODE_COOKED);
