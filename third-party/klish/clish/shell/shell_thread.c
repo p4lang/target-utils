@@ -448,6 +448,7 @@ static void *cli_socket_main(void *args)
 	char *install_dir_path;
 	char **p4_names;
 	bool local_only;
+	int last_status = 0;
 
 	cli_socket_main_args_t *cargs = (cli_socket_main_args_t *)args;
 	install_dir_path = cargs->install_dir_path;
@@ -491,16 +492,26 @@ static void *cli_socket_main(void *args)
 	}
 	while (nd = accept(sd, NULL, 0)) {
 		if (nd < 0) {
+			// The condition needs for prevent spam of logs
+			// in case reaching the descriptor limit
+			if (last_status != errno) {
+				fprintf(stderr, "accept %d errored with error %d\n", nd, errno);
+			}
 			// If error is EINTR, then retry again
-			// else something went horribly wrong and quit this thread
-			fprintf(stderr, "accept %d errored with error %d\n", nd, errno);
 			if (errno == EINTR) {
 				continue;
+			// If errors is EMFILE or ENFILE, means that the limit of fd
+			// has been reached max limit, then retry again
+			} else if (errno == EMFILE || errno == ENFILE) {
+				last_status = errno;
+				continue;
+			// else something went horribly wrong and quit this thread
 			} else {
 				perror("UnHandled Error on accept in shell_thread");
 				return NULL;
 			}
 		}
+		last_status = 0;
 		cli_socket_thread_args_t *targs;
 		targs = bf_sys_malloc(sizeof(cli_socket_thread_args_t));
 		targs->nd = nd;
