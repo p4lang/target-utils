@@ -122,7 +122,7 @@ aim_pvs_file_destroy__(aim_object_t* object)
         if(pvs->description) {
             aim_free(pvs->description);
         }
-        aim_free(object);
+        object = NULL;
     }
 }
 
