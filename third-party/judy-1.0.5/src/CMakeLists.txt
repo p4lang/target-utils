@@ -1,7 +1,7 @@
 if (CMAKE_CXX_COMPILER_ID STREQUAL "Clang")
   set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -fPIC -fno-strict-aliasing -Wno-sign-compare -Wno-array-bounds")
 else()
-  set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -fPIC -fno-strict-aliasing -fno-aggressive-loop-optimizations -Wno-sign-compare -Wno-shadow -Wno-array-bounds")
+  set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -fPIC -fno-strict-aliasing -fno-aggressive-loop-optimizations -Wno-sign-compare -Wno-shadow -Wno-array-bounds -Wno-stringop-overflow")
 endif()
 
 if (FORCE32)
