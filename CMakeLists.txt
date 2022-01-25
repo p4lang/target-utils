@@ -34,6 +34,20 @@ include_directories(${CMAKE_CURRENT_SOURCE_DIR}/third-party/xxHash)
 add_subdirectory(src)
 add_subdirectory(third-party)
 
+add_library(target_utils SHARED
+  $<TARGET_OBJECTS:target_sysutil_o>
+  $<TARGET_OBJECTS:xxhash_o>
+  $<TARGET_OBJECTS:tommyds_o>
+  $<TARGET_OBJECTS:JudyCommon>
+  $<TARGET_OBJECTS:JudyL>
+  $<TARGET_OBJECTS:Judy1>
+  $<TARGET_OBJECTS:JudySL>
+  $<TARGET_OBJECTS:JudyHS>
+)
+
+add_dependencies(target_utils cjson)
+target_link_libraries(target_utils PUBLIC cjson)
+
 file(COPY include/target-utils DESTINATION ${CMAKE_INSTALL_PREFIX}/include
   PATTERN "*.doxy" EXCLUDE
   PATTERN "*.am" EXCLUDE)
