@@ -35,7 +35,7 @@ function(buildTommyds)
     tommyds/tommyds/tommylist.c
     tommyds/tommyds/tommytrie.c
     tommyds/tommyds/tommytrieinp.c)
-  set_target_properties(tommyds_o PROPERTIES COMPILE_FLAGS "-Wno-pointer-arith -Wno-implicit-fallthrough")
+  set_target_properties(tommyds_o PROPERTIES COMPILE_FLAGS "-Wno-pointer-arith -Wno-implicit-fallthrough -Wno-free-nonheap-object")
   add_library(tommyds SHARED EXCLUDE_FROM_ALL $<TARGET_OBJECTS:tommyds_o>)
 endfunction()
 
