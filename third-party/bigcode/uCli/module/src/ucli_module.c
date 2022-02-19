@@ -233,7 +233,7 @@ ucli_module_help(ucli_module_t* mod, aim_pvs_t* pvs)
     }
 
     BIGLIST_FOREACH_DATA(ble, mod->command_list, ucli_command_t*, cp) {
-        aim_printf(pvs, "  %-16s%s\n",
+        aim_printf(pvs, "  %-16s %s\n",
                    cp->command, cp->help.summary ? cp->help.summary : "");
     }
 
