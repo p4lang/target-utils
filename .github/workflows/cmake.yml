@@ -20,7 +20,7 @@ jobs:
 
     steps:
     - name: dependecies install
-      run: sudo apt-get install -y libedit-dev && sudo apt-get install -y expat
+      run: sudo apt update && sudo apt install -y libedit-dev expat
     - name: Checking out repo and submodules
       uses: actions/checkout@v2
       with:
