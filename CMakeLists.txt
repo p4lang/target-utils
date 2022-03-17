@@ -45,8 +45,11 @@ add_library(target_utils SHARED
   $<TARGET_OBJECTS:JudyHS>
 )
 
-add_dependencies(target_utils cjson)
-target_link_libraries(target_utils PUBLIC cjson)
+# When linking cjson, we want to ensure that the whole archive is added
+# to the target_utils library and the symbols are forced to always be in.
+# Switching the whole-archive option after linking cjson is important so
+# that other archives and libraries don't start using this option
+target_link_libraries(target_utils PUBLIC "-Wl,--whole-archive" cjson "-Wl,--no-whole-archive")
 
 file(COPY include/target-utils DESTINATION ${CMAKE_INSTALL_PREFIX}/include
   PATTERN "*.doxy" EXCLUDE
