@@ -245,6 +245,7 @@ start:
 			++optind;
 		if (PRINT_ERROR)
 			xwarnx(illoptchar, optchar);
+		place = EMSG;
 		optopt = optchar;
 		return BADCH;
 	}
