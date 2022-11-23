@@ -192,7 +192,6 @@ static void clish_shell_fini(clish_shell_t *this)
 
 	lub_string_free(this->lockfile);
 	lub_string_free(this->default_shebang);
-	lub_free(this->user);
 	if (this->fifo_temp)
 		lub_string_free(this->fifo_temp);
 }
