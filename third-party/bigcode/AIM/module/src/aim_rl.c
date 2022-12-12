@@ -63,7 +63,7 @@ uint64_t
 aim_ratelimiter_next_allowed_time(aim_ratelimiter_t* rl)
 {
     if(rl) {
-        uint64_t burst_time = rl->burst * rl->interval;
+        uint64_t burst_time = ((uint64_t) rl->burst * rl->interval);
         /* Avoid integer underflow */
         if (rl->empty_time < burst_time) {
             return 0;

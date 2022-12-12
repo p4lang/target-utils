@@ -124,6 +124,8 @@ void ucli_log_file_open(char *fname, ucli_context_t* uc)
     aim_pvs_t* tmp_pvs = NULL;
     tmp_pvs = aim_pvs_fopen(fname, "a");
     uc->pvs = *tmp_pvs;
+    tmp_pvs=NULL;
+    free(tmp_pvs);
 }
 
 void ucli_log_file_close(ucli_context_t* uc)

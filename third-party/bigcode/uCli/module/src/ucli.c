@@ -624,6 +624,7 @@ ucli_dispatch_filep(ucli_t* ucli, aim_pvs_t* pvs, FILE* fp)
             aim_printf(pvs, "[ '%s' ]\n", line);
             rv = ucli_dispatch_string(ucli, pvs, line);
         }
+    free(line);
     }
     return rv;
 }

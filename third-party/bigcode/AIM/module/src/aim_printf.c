@@ -269,6 +269,7 @@ aim_vprintf(aim_pvs_t* pvs, const char* fmt, va_list _vargs)
         count += aim_pvs_vprintf(pvs, fmt_, vargs.val);
     }
     aim_free(fmt_);
+    va_end(vargs.val);
     return count;
 }
 
