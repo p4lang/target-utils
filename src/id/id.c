@@ -74,7 +74,7 @@ static inline int _fit_width(uint32_t val, unsigned width) {
   uint32_t mask;
   uint32_t b;
 
-  while (offset >= width) {
+  while (offset > width) {
     mask = (((uint32_t)1 << width) - 1) << (offset - width);
     b = val & mask;
     if (!b) return offset;
