@@ -75,7 +75,10 @@ static inline int _fit_width(uint32_t val, unsigned width) {
   uint32_t b;
 
   while (offset > width) {
-    mask = (((uint32_t)1 << width) - 1) << (offset - width);
+    if(width==32)
+	    mask=~0;
+    else
+	    mask = (((uint32_t)1 << width) - 1) << (offset - width);
     b = val & mask;
     if (!b) return offset;
     offset = __builtin_ctz(b);
