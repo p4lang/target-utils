@@ -69,23 +69,6 @@ void bf_id_allocator_destroy(bf_id_allocator *allocator) {
   bf_sys_free(allocator);
 }
 
-static inline int _fit_width(uint32_t val, unsigned width) {
-  unsigned offset = 32;
-  uint32_t mask;
-  uint32_t b;
-
-  while (offset >= width) {
-    if(width==32)
-	    mask=~0;
-    else
-	    mask = (((uint32_t)1 << width) - 1) << (offset - width);
-    b = val & mask;
-    if (!b) return offset;
-    offset = __builtin_ctz(b);
-  }
-  return -1;
-}
-
 /**
 Allocate count contiguous ids (max 32)
 @param allocator allocator created with create
