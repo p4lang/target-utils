@@ -124,8 +124,7 @@ void ucli_log_file_open(char *fname, ucli_context_t* uc)
     aim_pvs_t* tmp_pvs = NULL;
     tmp_pvs = aim_pvs_fopen(fname, "a");
     uc->pvs = *tmp_pvs;
-    tmp_pvs=NULL;
-    free(tmp_pvs);
+    aim_free(tmp_pvs);
 }
 
 void ucli_log_file_close(ucli_context_t* uc)
@@ -134,7 +133,7 @@ void ucli_log_file_close(ucli_context_t* uc)
 }
 static ucli_status_t
 ucli_ucli_mlog__set__(ucli_context_t* uc)
-{
+{	
     const char* module_name;
     aim_log_t* lobj;
     char* f = NULL;
