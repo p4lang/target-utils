@@ -144,6 +144,12 @@
 /* Define to 1 if you have the <pcap/pcap.h> header file. */
 #cmakedefine HAVE_PCAP_H 1
 
+/* Define to 1 if you have the <pwd.h> header file. */
+#cmakedefine HAVE_PWD_H 1
+
+/* Define to 1 if you have the <grp.h> header file. */
+#cmakedefine HAVE_GRP_H 1
+
 /*************************** FUNCTIONS ***************************/
 
 /* Define to 1 if you have the `clock_gettime' function. */
