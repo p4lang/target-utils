@@ -42,6 +42,8 @@ check_include_file(sched.h HAVE_SCHED_H)
 check_include_file(strings.h HAVE_STRINGS_H)
 check_include_file(string.h HAVE_STRING_H)
 check_include_file(pcap/pcap.h HAVE_PCAP_H)
+check_include_file(pwd.h HAVE_PWD_H)
+check_include_file(grp.h HAVE_GRP_H)
 
 check_function_exists(clock_gettime HAVE_CLOCK_GETTIME)
 check_function_exists(floor HAVE_FLOOR)
