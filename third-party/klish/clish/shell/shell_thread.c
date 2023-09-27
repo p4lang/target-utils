@@ -621,7 +621,7 @@ void *default_shell(void *args)
 
 	signal(SIGTTIN, SIG_IGN);
 	signal(SIGTTOU, SIG_IGN);
-	struct sigaction old_winch, new_winch;
+	struct sigaction old_winch = {0}, new_winch = {0};
 	new_winch.sa_handler = SIGWINCHhandler;
 	sigaction(SIGWINCH, &new_winch, &old_winch);
 
