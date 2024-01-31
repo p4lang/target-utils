@@ -211,7 +211,7 @@ bf_rbt_node_t *bf_get_lowest_priority_node(bf_rbt_node_t *rbt_head) {
 
 bf_rbt_node_direction_t bf_get_rbt_node_direction(bf_rbt_node_t *root) {
   if (root->parent == NULL)
-    return BF_RBT_ERR;
+    return BF_RBT_ROOT_NODE;
   if (root->parent->priority < root->priority ||
       (root->parent->right != NULL && root->parent->right->priority == root->priority))
     return BF_RBT_RIGHT_NODE;
