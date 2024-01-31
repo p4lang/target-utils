@@ -7,5 +7,6 @@ add_library(target_sysutil_o OBJECT
   fbitset/fbitset.c
   id/id.c
   map/map.c
+  rbt/rbt.c
   power2_allocator/power2_allocator.c
 )
