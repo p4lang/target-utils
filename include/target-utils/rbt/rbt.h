@@ -19,24 +19,24 @@
 #define BLACK 0
 #define RED   1
 
-typedef enum bf_rbt_sts_t {
+typedef enum bf_rbt_sts {
   BF_RBT_OK,
-  BF_RBT_ERR = 3,
+  BF_RBT_ERR,
   BF_RBT_NO_KEY,
   BF_RBT_KEY_EXISTS
 } bf_rbt_sts_t;
 
-enum rbt_node_direction {
-	left_node,
-	right_node,
-	invalid
-};
+typedef enum bf_rbt_node_direction {
+  BF_RBT_LEFT_NODE,
+  BF_RBT_RIGHT_NODE,
+  BF_RBT_ROOT_NODE
+} bf_rbt_node_direction_t;
 
 typedef struct bf_rbt_node_t {
-	uint32_t priority;
-	bool color;
-	struct bf_rbt_node_t *left, *right, *parent;
-	void *data;
+  uint32_t priority;
+  bool color;
+  struct bf_rbt_node_t *left, *right, *parent;
+  void *data;
 } bf_rbt_node_t;
 
 /*!
@@ -108,7 +108,7 @@ bf_rbt_node_t *bf_get_neighbor_rbt_node(bf_rbt_node_t *root);
  * @param root child node for which it is necessary to determine its direction.
  * @return direction left/right child
  */
-int bf_get_rbt_node_direction(bf_rbt_node_t *root);
+bf_rbt_node_direction_t bf_get_rbt_node_direction(bf_rbt_node_t *root);
 
 /*!
  * Retrieve inorder successor node for given node

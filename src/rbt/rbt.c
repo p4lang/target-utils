@@ -209,13 +209,13 @@ bf_rbt_node_t *bf_get_lowest_priority_node(bf_rbt_node_t *rbt_head) {
     return current;
 }
 
-int bf_get_rbt_node_direction(bf_rbt_node_t *root) {
+bf_rbt_node_direction_t bf_get_rbt_node_direction(bf_rbt_node_t *root) {
 	if (root->parent == NULL)
 		return BF_RBT_ERR;
 	if (root->parent->priority < root->priority ||
 	    (root->parent->right != NULL && root->parent->right->priority == root->priority))
-		return right_node;
-	return left_node;
+		return BF_RBT_RIGHT_NODE;
+	return BF_RBT_LEFT_NODE;
 }
 
 bool bf_get_rbt_neigh_color(bf_rbt_node_t *root) {
@@ -366,7 +366,7 @@ bf_rbt_node_t *bf_bst_node_deletion(uint32_t key, bf_rbt_node_t *rbt_head, int *
 void bf_balance_rbt_post_deletion(bf_rbt_node_t *node, bf_rbt_node_t **rbt_head) {
 	bf_rbt_node_t *neigh_node;
 	bool imbalance_tree = true;
-	int node_dir;
+	bf_rbt_node_direction_t node_dir;
 	while (imbalance_tree != false && node != NULL) {
 		if (node->parent == NULL) {
 			imbalance_tree = false;
@@ -393,7 +393,7 @@ void bf_balance_rbt_post_deletion(bf_rbt_node_t *node, bf_rbt_node_t **rbt_head)
 			/* Check if far child from current node is RED which means
 			 * right child of neighbor is RED if current node is in the left
 			 */
-			else if (node_dir == left_node && neigh_node->right != NULL && neigh_node->right->color == RED) {
+			else if (node_dir == BF_RBT_LEFT_NODE && neigh_node->right != NULL && neigh_node->right->color == RED) {
 				bf_left_rotate_rbt_node(node->parent, rbt_head);
 				neigh_node->right->color = BLACK;
 				imbalance_tree = false;
@@ -401,7 +401,7 @@ void bf_balance_rbt_post_deletion(bf_rbt_node_t *node, bf_rbt_node_t **rbt_head)
 			/* Mirror copy of above case
 			 * left child of neighbor is RED if current node is in the right
 			 */
-			else if (node_dir == right_node && neigh_node->left != NULL && neigh_node->left->color == RED) {
+			else if (node_dir == BF_RBT_RIGHT_NODE && neigh_node->left != NULL && neigh_node->left->color == RED) {
 				bf_right_rotate_rbt_node(node->parent, rbt_head);
 				neigh_node->left->color = BLACK;
 				imbalance_tree = false;
@@ -409,19 +409,19 @@ void bf_balance_rbt_post_deletion(bf_rbt_node_t *node, bf_rbt_node_t **rbt_head)
 			/* Check if far child from current node is BLACK and near child is RED which means
 			 * right child of neighbor is BLACK, left child of neighbor is RED if current node is in the left
 			 */
-			else if (node_dir == left_node && (neigh_node->right == NULL || neigh_node->right->color == BLACK) &&
+			else if (node_dir == BF_RBT_LEFT_NODE && (neigh_node->right == NULL || neigh_node->right->color == BLACK) &&
 				 (neigh_node->left != NULL && neigh_node->left->color == RED)) {
 				bf_right_rotate_rbt_node(neigh_node, rbt_head);
 			}
 			/* Mirror copy of above case
 			 * right child of neighbor is RED, left child of neighbor is BLACK if current node is in the right
 			 */
-			else if (node_dir == right_node && (neigh_node->left == NULL || neigh_node->left->color == BLACK) &&
+			else if (node_dir == BF_RBT_RIGHT_NODE && (neigh_node->left == NULL || neigh_node->left->color == BLACK) &&
 				 (neigh_node->right != NULL && neigh_node->right->color == RED)) {
 				bf_left_rotate_rbt_node(neigh_node, rbt_head);
 			}
 		} else {
-			if (node_dir == right_node)
+			if (node_dir == BF_RBT_RIGHT_NODE)
 				bf_right_rotate_rbt_node(node->parent, rbt_head);
 			else
 				bf_left_rotate_rbt_node(node->parent, rbt_head);
@@ -433,7 +433,7 @@ void bf_balance_rbt_post_deletion(bf_rbt_node_t *node, bf_rbt_node_t **rbt_head)
 
 int bf_remove_rbt_entry(uint32_t key, bf_rbt_node_t **rbt_head) {
 	bf_rbt_node_t *res_node, *parent;
-	int child_dir;
+	bf_rbt_node_direction_t child_dir;
 	int color;
 	//Apply traditional BST deletion and get the node to be deleted
 	res_node = bf_bst_node_deletion(key, *rbt_head, &color);
@@ -450,7 +450,7 @@ int bf_remove_rbt_entry(uint32_t key, bf_rbt_node_t **rbt_head) {
 	} else {
 		// Update the parent of node to be deleted
 		child_dir = bf_get_rbt_node_direction(res_node);
-		if (child_dir == left_node) {
+		if (child_dir == BF_RBT_LEFT_NODE) {
 			parent->left = NULL;
 		} else {
 			parent->right = NULL;
