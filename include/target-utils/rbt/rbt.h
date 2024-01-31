@@ -80,11 +80,10 @@ bf_rbt_node_t *bf_perform_rotation(bf_rbt_node_t *parent, bf_rbt_node_t **rbt_he
  * Fix RBT node colors as part of balancing tree
  *
  * @param parent node based on which direction of rotation is evaluated
- * @param key priority of child node
- * @param key priority of child node
+ * @param rbt_head head ptr of rb-tree
  * @return void
  */
-void bf_color_fix_rbt_nodes(bf_rbt_node_t *parent, bf_rbt_node_t **rbt_head, uint32_t key);
+void bf_color_fix_rbt_nodes(bf_rbt_node_t *parent, bf_rbt_node_t **rbt_head);
 
 /*!
  * Retrieve color of neighbor node

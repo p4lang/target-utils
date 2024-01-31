@@ -248,7 +248,7 @@ bf_rbt_node_t *bf_get_neighbor_rbt_node(bf_rbt_node_t *root) {
   return NULL;
 }
 
-void bf_color_fix_rbt_nodes(bf_rbt_node_t *root, bf_rbt_node_t **rbt_head, uint32_t key) {
+void bf_color_fix_rbt_nodes(bf_rbt_node_t *root, bf_rbt_node_t **rbt_head) {
   if (root->color == BLACK)
     return;
   bf_rbt_node_t *parent = root->parent;
@@ -277,7 +277,7 @@ void bf_balance_rbt_post_insertion(bf_rbt_node_t *root, bf_rbt_node_t **rbt_head
      * recoloring upper node to balance RB Tree
      */
     if (neigh_color == RED)
-      bf_color_fix_rbt_nodes(root, rbt_head, key);
+      bf_color_fix_rbt_nodes(root, rbt_head);
     /* If neighbor node color is BLACK, perform
      * rotation to balance the RB Tree
      */
