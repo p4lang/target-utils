@@ -14,6 +14,8 @@ set(CMAKE_BUILD_TYPE "RelWithDebInfo")
 
 include(ConfigureChecks)
 
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Werror=unused-parameter")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Werror=unused-parameter")
 
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/include)
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
@@ -30,6 +32,7 @@ include_directories(${CMAKE_CURRENT_SOURCE_DIR}/third-party/klish/target_utils)
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/third-party/judy-1.0.5/src)
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/third-party/tommyds/tommyds)
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/third-party/xxHash)
+
 
 add_subdirectory(src)
 add_subdirectory(third-party)
