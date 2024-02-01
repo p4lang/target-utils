@@ -33,20 +33,20 @@ typedef enum bf_rbt_node_direction {
 } bf_rbt_node_direction_t;
 
 typedef struct bf_rbt_node_t {
-  uint32_t priority;
+  uint32_t key;
   bool color;
   struct bf_rbt_node_t *left, *right, *parent;
   void *data;
 } bf_rbt_node_t;
 
 /*!
- * Create a tree node for the priority
+ * Create a tree node for the key
  *
- * @param priority parsed from match spec
+ * @param key to be created
  * @param root parent node of new node to be created
  * @return pointer to newly created node
  */
-bf_rbt_node_t *bf_create_rbt_node(uint32_t priority, bf_rbt_node_t *root);
+bf_rbt_node_t *bf_create_rbt_node(uint32_t key, bf_rbt_node_t *root);
 
 /*!
  * Perform a right rotation of node
@@ -71,7 +71,7 @@ bf_rbt_node_t *bf_left_rotate_rbt_node(bf_rbt_node_t *node, bf_rbt_node_t **rbt_
  *
  * @param parent node based on which direction of rotation is evaluated
  * @param rbt_head head ptr of rb-tree
- * @param key priority of child node
+ * @param key of child node
  * @return pointer to node after rotation
  */
 bf_rbt_node_t *bf_perform_rotation(bf_rbt_node_t *parent, bf_rbt_node_t **rbt_head, uint32_t key);
@@ -126,61 +126,64 @@ bf_rbt_node_t *bf_get_successor_rbt_node(bf_rbt_node_t *root);
 bf_rbt_node_t *bf_get_predecessor_rbt_node(bf_rbt_node_t *root);
 
 /*!
- * Insert a tree node into RBT with given priority
+ * Insert a tree node into RBT with given key
  *
- * @param key priority to be inserted into RBT
+ * @param key to be inserted into RBT
  * @param root parent node of new node to be created
+ * @param rbt_head head ptr of rb-tree
  * @return pointer to newly created node
  */
 bf_rbt_node_t *bf_insert_rbt_entry(bf_rbt_node_t *root, uint32_t key, bf_rbt_node_t **rbt_head);
 
 /*!
- * Rtrieve node which is just lesser than or equal to given priority
+ * Rtrieve node which is just lesser than or equal to given key
  *
- * @param priority for which lower bound has to be found
+ * @param key for which lower bound has to be found
  * @param rbt_head head ptr of rb-tree
  * @return pointer to lower bound node
  */
-bf_rbt_node_t *bf_get_lower_bound(uint32_t priority, bf_rbt_node_t *rbt_head);
+bf_rbt_node_t *bf_get_lower_bound(uint32_t key, bf_rbt_node_t *rbt_head);
 
 /*!
- * Retrieve node which is just greater than or equal to given priority
+ * Retrieve node which is just greater than or equal to given key
  *
- * @param priority for which upper bound has to be found
+ * @param key for which upper bound has to be found
  * @param rbt_head head ptr of rb-tree
  * @return pointer to upper bound node
  */
-bf_rbt_node_t *bf_get_upper_bound(uint32_t priority, bf_rbt_node_t *rbt_head);
+bf_rbt_node_t *bf_get_upper_bound(uint32_t key, bf_rbt_node_t *rbt_head);
 
 /*!
- * Retrieve node with highest priority in rb-tree
+ * Retrieve node with highest key in rb-tree
  *
  * @param rbt_head head ptr of rb-tree
- * @return pointer to highest priority node
+ * @return pointer to highest key node
  */
-bf_rbt_node_t *bf_get_highest_priority_node(bf_rbt_node_t *rbt_head);
+bf_rbt_node_t *bf_get_highest_key_node(bf_rbt_node_t *rbt_head);
 
 /*!
- * Retrieve node with lowest priority in rb-tree
+ * Retrieve node with lowest key in rb-tree
  *
  * @param rbt_head head ptr of rb-tree
- * @return pointer to lowest priority node
+ * @return pointer to lowest key node
  */
-bf_rbt_node_t *bf_get_lowest_priority_node(bf_rbt_node_t *rbt_head);
+bf_rbt_node_t *bf_get_lowest_key_node(bf_rbt_node_t *rbt_head);
 
 /*!
  * Perform BST node deletion for given key and update color information
  *
- * @param key priority to be deleted from RBT
+ * @param key to be deleted from RBT
+ * @param rbt_head head ptr of rb-tree
  * @param color address where color needs to be updated
  * @return node which has to be deleted
  */
 bf_rbt_node_t *bf_bst_node_deletion(uint32_t key, bf_rbt_node_t *rbt_head, int *color);
 
 /*!
- * Remove a tree node from RBT with given priority
+ * Remove a tree node from RBT with given key
  *
- * @param key priority of node to be deleted from RBT
+ * @param key of node to be deleted from RBT
+ * @param rbt_head head ptr of rb-tree
  * @return status of API call
  */
 int bf_remove_rbt_entry(uint32_t key, bf_rbt_node_t **rbt_head);
@@ -189,7 +192,8 @@ int bf_remove_rbt_entry(uint32_t key, bf_rbt_node_t **rbt_head);
  * Balance RBT after insertion of new node
  *
  * @param root parent of the node which got inserted
- * @param key priority of inserted node
+ * @param rbt_head head ptr of rb-tree
+ * @param key of inserted node
  * @return void
  */
 void bf_balance_rbt_post_insertion(bf_rbt_node_t *root, bf_rbt_node_t **rbt_head, uint32_t key);
@@ -198,6 +202,7 @@ void bf_balance_rbt_post_insertion(bf_rbt_node_t *root, bf_rbt_node_t **rbt_head
  * Balance RBT after deletion of a node
  *
  * @param node node to be deleted from RBT
+ * @param rbt_head head ptr of rb-tree
  * @return void
  */
 void bf_balance_rbt_post_deletion(bf_rbt_node_t *node, bf_rbt_node_t **rbt_head);

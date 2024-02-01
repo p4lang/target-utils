@@ -17,11 +17,11 @@
 #include <target-sys/bf_sal/bf_sys_intf.h>
 #include <target-utils/rbt/rbt.h>
 
-bf_rbt_node_t *bf_create_rbt_node(uint32_t priority, bf_rbt_node_t *root) {
+bf_rbt_node_t *bf_create_rbt_node(uint32_t key, bf_rbt_node_t *root) {
   bf_rbt_node_t *new_node = (bf_rbt_node_t *)bf_sys_calloc(1, sizeof(bf_rbt_node_t));
   if (new_node == NULL)
     return NULL;
-  new_node->priority = priority;
+  new_node->key = key;
   new_node->color = RED;
   new_node->left = new_node->right = NULL;
   new_node->parent = root;
@@ -46,7 +46,7 @@ bf_rbt_node_t *bf_right_rotate_rbt_node(bf_rbt_node_t *node, bf_rbt_node_t **rbt
     g_child->parent = node;
 
   if (g_parent != NULL) {
-    if (g_parent->priority < l_child->priority)
+    if (g_parent->key < l_child->key)
       g_parent->right = l_child;
     else
       g_parent->left = l_child;
@@ -76,7 +76,7 @@ bf_rbt_node_t *bf_left_rotate_rbt_node(bf_rbt_node_t *node, bf_rbt_node_t **rbt_
     g_child->parent = node;
 
   if (g_parent != NULL) {
-    if (g_parent->priority < r_child->priority)
+    if (g_parent->key < r_child->key)
       g_parent->right = r_child;
     else
       g_parent->left = r_child;
@@ -90,14 +90,14 @@ bf_rbt_node_t *bf_left_rotate_rbt_node(bf_rbt_node_t *node, bf_rbt_node_t **rbt_
 
 bf_rbt_node_t *bf_perform_rotation(bf_rbt_node_t *parent, bf_rbt_node_t **rbt_head, uint32_t key) {
   bf_rbt_node_t *g_parent = parent->parent;
-  /* If g_parent->priority < parent->priority,
+  /* If g_parent->key < parent->key,
    * then parent is right child to grand parent
    */
-  if (g_parent->priority < parent->priority) {
-    /* If parent->priority < key, then new node is right child to parent
+  if (g_parent->key < parent->key) {
+    /* If parent->key < key, then new node is right child to parent
      * Perform left rotation
      */
-    if (parent->priority < key) {
+    if (parent->key < key) {
       parent = bf_left_rotate_rbt_node(g_parent, rbt_head);
     }
     /* If new node is left child to parent. It needs 2 rotations.
@@ -108,14 +108,14 @@ bf_rbt_node_t *bf_perform_rotation(bf_rbt_node_t *parent, bf_rbt_node_t **rbt_he
       parent = bf_left_rotate_rbt_node(g_parent, rbt_head);
     }
   }
-  /* If g_parent->priority > parent->priority,
+  /* If g_parent->key > parent->key,
    * then parent is left child to grand parent
    */
   else {
-    /* If parent->priority < key, then new node is right child to parent
+    /* If parent->key < key, then new node is right child to parent
      * Left rotate parent, right rotate grand parent node
      */
-    if (parent->priority < key) {
+    if (parent->key < key) {
       parent = bf_left_rotate_rbt_node(parent, rbt_head);
       parent = bf_right_rotate_rbt_node(g_parent, rbt_head);
     }
@@ -147,14 +147,14 @@ bf_rbt_node_t *bf_get_predecessor_rbt_node(bf_rbt_node_t *root) {
   return predecessor;
 }
 
-bf_rbt_node_t *bf_get_lower_bound(uint32_t priority, bf_rbt_node_t *rbt_head) {
+bf_rbt_node_t *bf_get_lower_bound(uint32_t key, bf_rbt_node_t *rbt_head) {
   bf_rbt_node_t *lower_bound = NULL;
   bf_rbt_node_t *root = rbt_head;
 
   while (root != NULL) {
-    if (root->priority == priority) {
+    if (root->key == key) {
       return root;  // Exact match found
-    } else if (root->priority > priority) {
+    } else if (root->key > key) {
       root = root->left;
     } else {
       lower_bound = root;  // Update result and move to the right subtree
@@ -165,14 +165,14 @@ bf_rbt_node_t *bf_get_lower_bound(uint32_t priority, bf_rbt_node_t *rbt_head) {
   return lower_bound;
 }
 
-bf_rbt_node_t *bf_get_upper_bound(uint32_t priority, bf_rbt_node_t *rbt_head) {
+bf_rbt_node_t *bf_get_upper_bound(uint32_t key, bf_rbt_node_t *rbt_head) {
   bf_rbt_node_t *upper_bound = NULL;
   bf_rbt_node_t *root = rbt_head;
 
   while (root != NULL) {
-    if (root->priority == priority) {
+    if (root->key == key) {
       return root;  // Exact match found
-    } else if (root->priority < priority) {
+    } else if (root->key < key) {
       root = root->right;
     } else {
       upper_bound = root;  // Update result and move to the left subtree
@@ -183,7 +183,7 @@ bf_rbt_node_t *bf_get_upper_bound(uint32_t priority, bf_rbt_node_t *rbt_head) {
   return upper_bound;
 }
 
-bf_rbt_node_t *bf_get_highest_priority_node(bf_rbt_node_t *rbt_head) {
+bf_rbt_node_t *bf_get_highest_key_node(bf_rbt_node_t *rbt_head) {
     bf_rbt_node_t *current = rbt_head;
     if (current == NULL)
       return NULL;
@@ -196,7 +196,7 @@ bf_rbt_node_t *bf_get_highest_priority_node(bf_rbt_node_t *rbt_head) {
     return current;
 }
 
-bf_rbt_node_t *bf_get_lowest_priority_node(bf_rbt_node_t *rbt_head) {
+bf_rbt_node_t *bf_get_lowest_key_node(bf_rbt_node_t *rbt_head) {
     bf_rbt_node_t *current = rbt_head;
     if (current == NULL)
       return NULL;
@@ -212,8 +212,8 @@ bf_rbt_node_t *bf_get_lowest_priority_node(bf_rbt_node_t *rbt_head) {
 bf_rbt_node_direction_t bf_get_rbt_node_direction(bf_rbt_node_t *root) {
   if (root->parent == NULL)
     return BF_RBT_ROOT_NODE;
-  if (root->parent->priority < root->priority ||
-      (root->parent->right != NULL && root->parent->right->priority == root->priority))
+  if (root->parent->key < root->key ||
+      (root->parent->right != NULL && root->parent->right->key == root->key))
     return BF_RBT_RIGHT_NODE;
   return BF_RBT_LEFT_NODE;
 }
@@ -222,12 +222,12 @@ bool bf_get_rbt_neigh_color(bf_rbt_node_t *root) {
   bf_rbt_node_t *parent = root->parent;
   if (parent == NULL)
     return BLACK;
-  if ((parent->right != NULL && parent->right->priority == root->priority) ||
-      parent->priority < root->priority) {
+  if ((parent->right != NULL && parent->right->key == root->key) ||
+      parent->key < root->key) {
     if (parent->left != NULL)
       return parent->left->color;
-  } else if ((parent->left != NULL && parent->left->priority == root->priority) ||
-      parent->priority > root->priority) {
+  } else if ((parent->left != NULL && parent->left->key == root->key) ||
+      parent->key > root->key) {
     if (parent->right != NULL)
       return parent->right->color;
   }
@@ -238,11 +238,11 @@ bf_rbt_node_t *bf_get_neighbor_rbt_node(bf_rbt_node_t *root) {
   bf_rbt_node_t *parent = root->parent;
   if (parent == NULL)
     return NULL;
-  if ((parent->right != NULL && parent->right->priority == root->priority) ||
-      parent->priority < root->priority) {
+  if ((parent->right != NULL && parent->right->key == root->key) ||
+      parent->key < root->key) {
     return parent->left;
-  } else if ((parent->left != NULL && parent->left->priority == root->priority) ||
-       parent->priority > root->priority) {
+  } else if ((parent->left != NULL && parent->left->key == root->key) ||
+       parent->key > root->key) {
     return parent->right;
   }
   return NULL;
@@ -253,7 +253,7 @@ void bf_color_fix_rbt_nodes(bf_rbt_node_t *root, bf_rbt_node_t **rbt_head) {
     return;
   bf_rbt_node_t *parent = root->parent;
   bf_rbt_node_t *sibling;
-  if(parent->priority < root->priority) {
+  if(parent->key < root->key) {
     sibling = parent->left;
   } else {
     sibling = parent->right;
@@ -265,7 +265,7 @@ void bf_color_fix_rbt_nodes(bf_rbt_node_t *root, bf_rbt_node_t **rbt_head) {
   } else {
     parent->color = RED;
     //Color fixing should be done from current node to top until reach root node
-    bf_balance_rbt_post_insertion(parent->parent, rbt_head, root->priority);
+    bf_balance_rbt_post_insertion(parent->parent, rbt_head, root->key);
   }
 }
 
@@ -302,18 +302,18 @@ bf_rbt_node_t *bf_insert_rbt_entry(bf_rbt_node_t *root, uint32_t key, bf_rbt_nod
   }
   while (root != NULL) {
     prev = root;
-    if (root->priority < key)
+    if (root->key < key)
       root = root->right;
-    else if (root->priority > key)
+    else if (root->key > key)
       root = root->left;
     else
       break;
   }
   if (root == NULL)
     root = prev;
-  if (root->priority == key) {
+  if (root->key == key) {
     return root;
-  } else if (root->priority < key) {
+  } else if (root->key < key) {
     root->right = bf_create_rbt_node(key, root);
     if (root->right == NULL)
       return NULL;
@@ -332,10 +332,10 @@ bf_rbt_node_t *bf_insert_rbt_entry(bf_rbt_node_t *root, uint32_t key, bf_rbt_nod
 bf_rbt_node_t *bf_bst_node_deletion(uint32_t key, bf_rbt_node_t *rbt_head, int *color) {
   bf_rbt_node_t *root_node = rbt_head;
   bf_rbt_node_t *replacement;
-  while (root_node != NULL && root_node->priority != key) {
-    if (root_node->priority < key)
+  while (root_node != NULL && root_node->key != key) {
+    if (root_node->key < key)
       root_node = root_node->right;
-    else if (root_node->priority > key)
+    else if (root_node->key > key)
       root_node = root_node->left;
   }
   while (root_node != NULL) {
@@ -354,7 +354,7 @@ bf_rbt_node_t *bf_bst_node_deletion(uint32_t key, bf_rbt_node_t *rbt_head, int *
       replacement = bf_get_successor_rbt_node(root_node);
       if (replacement == NULL)
         replacement = bf_get_predecessor_rbt_node(root_node);
-      root_node->priority = replacement->priority;
+      root_node->key = replacement->key;
       root_node->data = replacement->data;
       *color = replacement->color;
       root_node = replacement;
